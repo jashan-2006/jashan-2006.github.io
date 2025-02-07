@@ -1,0 +1,170 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+/* Background */
+body {
+    background: black;
+    color: white;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 50px;
+    background: rgb(20, 20, 20);
+    box-shadow: 0 0 10px cyan;
+    position: fixed;
+    width: 91%;
+    height: fit-content;
+    margin-right: 15px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: cyan;
+    
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: black;
+}
+a{
+ text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px; 
+    background: cyan;
+    width: 150px;
+    height: 25px;
+    padding: 0px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px cyan;
+    transition: all 0.3s ease-in-out;
+    text-align: center; 
+}
+a:hover{
+    box-shadow: 0 0 25px magenta;
+    background: magenta;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px;
+    color: white;
+    font-size: 40px;
+}
+
+.hero .neon-text {
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+}
+
+.btn-glow {
+    display: inline-block;
+    width: 500px;
+    height: 60px;
+    margin-top: 30px;
+    padding: 12px 0px;
+    background: cyan;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 0 0 15px cyan;
+}
+.btn-glow2 {
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: cyan;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 0 0 15px cyan;
+    font-size: 20px;
+}
+h2{
+    margin-bottom: 5px;
+    
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 25px magenta;
+    background: magenta;
+}
+.btn-glow2:hover {
+    box-shadow: 0 0 25px magenta;
+    background: magenta;
+}
+
+/* Matches Section */
+.matches {
+    text-align: center;
+    padding: 30px;
+}
+.matches h2{
+    font-size: 40px;
+}
+
+.match-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.match-card {
+    background: rgba(20, 20, 20, 0.8);
+    color: white;
+    padding: 50px;
+    border-radius: 20px;
+    width: 350px;
+    box-shadow: 0 0 10px cyan;
+    transition: all 0.3s ease-in-out;
+    margin-top: 30px;
+}
+
+.match-card:hover {
+    box-shadow: 0 0 20px magenta;
+}
+
+.match-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+.teams{
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(20, 20, 20, 0.8);
+    color: cyan;
+    box-shadow: 0 0 10px cyan;
+    margin-top: 50px;
+}
