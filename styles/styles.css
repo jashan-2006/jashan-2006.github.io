@@ -6,6 +6,23 @@ html {
 }
 
 
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+html,body{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex: 1;
+}
+
+
 /* Background */
 body {
     background: black;
@@ -21,7 +38,7 @@ header {
     background: rgb(20, 20, 20);
     box-shadow: 0 0 10px cyan;
     position: fixed;
-    width: 91%;
+    width: 100%;
     height: fit-content;
     margin-right: 15px;
 }
@@ -30,16 +47,19 @@ header {
     font-size: 24px;
     font-weight: bold;
     color: cyan;
-    
 }
+
 
 nav ul {
     display: flex;
     list-style: none;
+    
 }
 
 nav ul li {
     margin: 0 15px;
+    margin-right: 100px;
+    
 }
 
 nav ul li a {
@@ -167,4 +187,33 @@ footer {
     color: cyan;
     box-shadow: 0 0 10px cyan;
     margin-top: 50px;
+}
+
+/* Adjust navigation for mobile */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
