@@ -127,3 +127,13 @@ a:hover{
     margin-top: 10px;
     text-align: center;
 }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(20, 20, 20, 0.8);
+    color: cyan;
+    box-shadow: 0 0 10px cyan;
+    margin-top: 50px;
+}
