@@ -13,7 +13,7 @@
         display: block;
         padding: 10px;
     }
-}
+} 
 @media (max-width: 768px) {
     header {
         flex-direction: row;
