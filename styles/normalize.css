@@ -1,0 +1,26 @@
+
+/* Adjust navigation for mobile */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: row;
+        padding: 10px 0;
+    }
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: row;
+        gap: 0px;
+    }
+}

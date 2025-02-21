@@ -1,0 +1,93 @@
+
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+html,body{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex: 1;
+}
+
+
+/* Background */
+body {
+    background: black;
+    color: white;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 50px;
+    background: rgb(20, 20, 20);
+    box-shadow: 0 0 10px cyan;
+    position: fixed;
+    width: 100%;
+    height: fit-content;
+}
+/* nav  bar*/
+.logo {
+    font-size: 20px;
+    
+    font-weight: bold;
+    color: cyan;
+    align-items: center;
+    margin-right: 100px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-right: 60px;
+}
+
+nav ul li {
+   
+    margin: 0 15px;
+    
+}
+
+nav ul li a {
+    color: black;
+    align-items: center;
+    
+}
+a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    padding: 10px;
+    flex-wrap: wrap;
+    background-color: cyan;
+    width: 150px;
+    height: auto;
+    padding: 0px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px cyan;
+    transition: all 0.3s ease-in-out;
+    
+}
+a:hover{
+    box-shadow: 0 0 25px magenta;
+    background: magenta;
+}
+/* Footer */
+footer {
+    text-align: center;
+    background: rgba(20, 20, 20, 0.8);
+    color: cyan;
+    box-shadow: 0 0 10px cyan;
+    
+    height: fit-content;
+    
+}
+
