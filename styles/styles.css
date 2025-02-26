@@ -4,14 +4,6 @@ html {
     box-sizing: border-box;
     
 }
-
-
-html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-}
 html,body{
     height: 100%;
     margin: 0;
@@ -32,30 +24,75 @@ body {
 /* Header */
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 2px 50px;
+    padding: 0% ;
     background: rgb(20, 20, 20);
     box-shadow: 0 0 10px cyan;
     position: fixed;
     width: 100%;
     height: 8%;
 }
+/* Video Background Container */
+.video-container {
+    position: fixed; /* Fixed position to cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: list-item; 
+    z-index: -1;
+}
+
+/* Video Wrapper */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 50%; /* Ensure each video takes at least half the screen */
+}
+
+/* Video Styling */
+.video-wrapper video {
+    height: 50%;
+    width: 100%;
+    object-fit: contain; /* Ensure video covers the entire container */
+}
+
+/* Black Tint Overlay */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.511); /* Semi-transparent black overlay */
+    z-index: 1; 
+}
+
 
 .logo {
-    font-size: 50px;
+    font-size: 135%;
+    padding-right: 18%;
     font-weight: bold;
     color: cyan;
     align-items: center;
 }
+
 nav ul {
     display: flex;
     list-style: none;
+    margin-left: 25%; 
+    justify-items: end;
+    padding-right: 0% ;
 }
 
 nav ul li {
-    margin: 0 15px;
-    margin-right: 100px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 110%;
+    font-weight: bold;
+    color: cyan;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
 }
 
 nav ul li a {
@@ -66,13 +103,12 @@ a{
  text-decoration: none;
     display: flex;
     justify-content: space-around;
-    gap: 30px;
-    padding: 10px;
-    flex-wrap: wrap;
+    gap: 25%;
+    padding: 2%;
     margin-top: auto; 
     background: cyan;
     width: 150px;
-    height: 25px;
+    height: auto;
     padding: 0px;
     border-radius: 20px;
     box-shadow: 0 0 10px cyan;
@@ -145,6 +181,7 @@ h2{
 }
 .matches h2{
     font-size: 35px;
+    justify-content: center;
 }
 
 .match-list {
@@ -175,42 +212,218 @@ h2{
 .teams{
     text-align: center;
 }
+.team-card img{
+    width: 860px;
+    height: auto;
+}
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 0px;
     background: rgba(20, 20, 20, 0.8);
     color: cyan;
     box-shadow: 0 0 10px cyan;
-    margin-top: 50px;
+    margin-top: 0px;
 }
+/* Media Queries for Responsiveness */
 
-/* Adjust navigation for mobile */
-@media (max-width: 480px) {
-    nav ul {
-        flex-direction: column;
-        padding: 10px 0;
-    }
-
-    nav ul li {
+/* For tablets */
+ @media (max-width: 912px) {
+    /* Header */
+    header {
         width: 100%;
-        text-align: center;
+        height: auto;
+    }
+   
+    .logo {
+        font-size: 24px;
+        padding: 0%;
+        margin: 0%;
+    }
+    nav ul{
+        padding: 0px;
+        padding-left:0%;
+        margin: 0px;
+    }
+    nav ul li a {
+        width:80px;
+        height: auto;
+        font-size: 12px;
+        padding: 0px 0px;
+        margin: 0px;
+       
+    }
+     /* Video Wrapper */
+     .video-wrapper {
+        justify-self: center;
+        position: relative;
+        width: 150%;
+        min-height: 10%; /* Ensure each video takes at least half the screen */
+    }
+    /* Hero Section */
+    .hero {
+        padding: 10% 10px;
+        padding-bottom: 0%;
+        justify-self: center;
+    }
+    .hero h1 {
+        font-size: 40px;
     }
 
+    .hero p {
+        font-size: 20px;
+        margin: 0px;
+        padding: 0px;
+    }
+    .btn-glow {
+        padding: 12px 24px;
+        font-size: 16px;
+        width: auto;
+        height: auto;
+    }
+    .btn-glow2{
+        width: auto;
+        height: auto;
+    }
+
+    /* Matches Section */
+    .matches h2 {
+        font-size: 28px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .match-card {
+        width: 250px;
+        padding: 15px;
+    }
+
+    .teams {
+        font-size: 16px;
+    }
+  
+    footer{
+        width: 100%;
+        height: auto;
+    }
+} 
+
+/* For phones */
+@media (max-width: 475px) {
+    /* Header */
+    header {
+        width: 100%;
+        height: fit-content;
+    }
+    .logo {
+        font-size: 80%;
+        padding: 0%;
+        margin: 0%;
+        
+    }
+    nav ul {
+       padding: 0px;
+       padding-left: 27%;
+       margin: 0px;
+    }
+    nav ul li {
+        padding: 2%;
+        margin: 0px;
+    }
     nav ul li a {
-        display: block;
+        width: 40px;
+        height: auto;
+        font-size: 6px;
+        
+    }
+
+    
+    /* Video Wrapper */
+    .video-wrapper {
+        justify-self: center;
+        position: relative;
+        width: 190%;
+        min-height: 10%; /* Ensure each video takes at least half the screen */
+    }
+    
+   
+    
+    /* Black Tint Overlay */
+    .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.728); /* Semi-transparent black overlay */
+        z-index: 1; 
+    }
+   
+    
+    /* Hero Section */
+ 
+    .hero {
+        padding-top: 10%;
+        
+        
+        
+    }
+    .hero h1 {
+        font-size: 20px;
+        padding: 0px;
+    }
+
+    .hero p {
+        font-size: 10px;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .btn-glow {
+        margin-top: 0%;
+        padding: 10px 20px;
+        font-size: 6px;
+        width: auto;
+        height: auto;
+    }
+
+    /* Matches Section */
+    
+    .matches h2 {
+        font-size: 12px;
+        
+    }
+    .match-list {
+        width: 100%;
+        height: fit-content;
+        font-size: x-small;
+    }
+    .match-card {
+        font-size: x-small;
         padding: 10px;
     }
-}
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
+    .btn-glow2{
+        font-size: 6px;
+        width: auto;
+        height: auto;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
+    .teams {
+        font-size: 14px;
+        
+        img{
+            width: 100%;
+        }
+    }
+   
+
+    /* Footer */
+    footer {
+        padding: auto;
+        font-size: xx-small;
+        width: 100%;
+        height: auto;
+        justify-items: center;
     }
 }

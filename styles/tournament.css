@@ -10,6 +10,7 @@ html,body{
     display: flex;
     flex-direction: column;
 }
+
 main{
     flex: 1;
 }
@@ -24,55 +25,60 @@ body {
 /* Header */
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 2px 50px;
+    padding: 0% ;
     background: rgb(20, 20, 20);
     box-shadow: 0 0 10px cyan;
     position: fixed;
     width: 100%;
-    height: fit-content;
-    margin-right: 15px;
+    height: 8%;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 135%;
+    padding-right: 18%;
     font-weight: bold;
     color: cyan;
+    align-items: center;
 }
-
 
 nav ul {
     display: flex;
     list-style: none;
-    
+    margin-left: 25%;   
+    justify-items: end;
+    padding-right: 0% ;
 }
 
 nav ul li {
-    margin: 0 15px;
-    margin-right: 100px;
-    
+    padding: 10px;
+    margin: 10px;
+    font-size: 110%;
+    font-weight: bold;
+    color: cyan;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
 }
 
 nav ul li a {
     color: black;
+    align-items: center;
 }
 a{
  text-decoration: none;
     display: flex;
     justify-content: space-around;
-    gap: 30px;
-    padding: 10px;
-    flex-wrap: wrap;
-    margin-top: 20px; 
+    gap: 25%;
+    padding: 2%;
+    margin-top: auto; 
     background: cyan;
     width: 150px;
-    height: 25px;
+    height: auto;
     padding: 0px;
     border-radius: 20px;
     box-shadow: 0 0 10px cyan;
     transition: all 0.3s ease-in-out;
-    text-align: center; 
+    
 }
 a:hover{
     box-shadow: 0 0 25px magenta;
@@ -144,38 +150,131 @@ a:hover{
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 0px;
     background: rgba(20, 20, 20, 0.8);
     color: cyan;
     box-shadow: 0 0 10px cyan;
-    margin-top: 50px;
+    margin-top: 0px;
+   
 }
-
-/* Adjust navigation for mobile */
-@media (max-width: 480px) {
-    nav ul {
-        flex-direction: column;
-        padding: 10px 0;
-    }
-
-    nav ul li {
+/* Media Queries for Responsiveness */
+@media (max-width: 912px) {
+    header {
         width: 100%;
-        text-align: center;
+        height: auto;
+    }
+   
+    .logo {
+        font-size: 24px;
+        padding: 0%;
+        margin: 0%;
+    }
+    nav ul{
+        padding: 0px;
+        padding-left:0%;
+        margin: 0px;
+    }
+    nav ul li a {
+        width:80px;
+        height: auto;
+        font-size: 12px;
+        padding: 0px 0px;
+        margin: 0px;
+       
+    }
+    .tournament-section {
+        padding: 80px 10px;
     }
 
-    nav ul li a {
-        display: block;
+    .tournament-section h1 {
+        font-size: 30px;
+    }
+
+    .tournament-grid1, .tournament-grid2 {
         padding: 10px;
     }
-}
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
+
+    .tournament-card {
+        width: 80%;
+        height: auto;
+        font-size: x-small;
+        max-width: 200px;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
+    .nomore {
+        font-size: 24px;
+        padding: 50px;
     }
 }
+/* For phones */
+@media (max-width: 475px) {
+    /* Header */
+    header {
+        width: 100%;
+        height: fit-content;
+    }
+    main{
+        flex: 1;
+    }
+    .logo {
+        font-size: 80%;
+        padding: 0%;
+        margin: 0%;
+        
+    }
+    nav ul {
+       padding: 0px;
+       padding-left: 25%;
+       margin: 0px;
+    }
+    nav ul li {
+        padding: 2%;
+        margin: 0px;
+    }
+    nav ul li a {
+        width: 40px;
+        height: auto;
+        font-size: 6px;
+        
+    }
+    .tournament-section {
+        padding: 60px 1px;
+    }
+
+    .tournament-section h1 {
+        font-size: 20px;
+    }
+
+    .tournament-grid1, .tournament-grid2 {
+        padding: 10px;
+        font-size: 6px;
+    }
+
+    .tournament-card {
+        width: 100%;
+        height: auto;
+        max-width: 80px;
+    }
+    .button {
+        font-size: 6px;
+        padding: 0px;
+        margin: 0px;
+        width: auto;
+        height: auto;
+    }
+
+    .nomore {
+        font-size: 24px;
+        padding: 50px;
+    }
+        /* Footer */
+        footer {
+            
+            font-size: xx-small;
+            width: 100%;
+            height: fit-content;
+            justify-items: center;
+            margin-top: auto;
+        }
+    }
+    
