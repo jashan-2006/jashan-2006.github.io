@@ -64,7 +64,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.511); /* Semi-transparent black overlay */
+    background: rgba(0, 0, 0, 0.705); /* Semi-transparent black overlay */
     z-index: 1; 
 }
 
