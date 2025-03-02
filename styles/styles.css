@@ -209,12 +209,26 @@ h2{
     width: 100%;
     border-radius: 10px;
 }
+.teams h2{
+    margin-bottom: 1%;
+}
 .teams{
     text-align: center;
+ 
 }
 .team-card img{
     width: 860px;
     height: auto;
+    border-radius: 3%;
+}
+.team-card{
+    border-radius: 3%;
+    box-shadow: 0 0 10px cyan;
+    background-color: rgba(20, 20, 20, 0.8);
+    padding: 1%;
+    width: fit-content;
+    justify-self: center;
+    margin-bottom: 4%;
 }
 
 /* Footer */
@@ -301,13 +315,19 @@ footer {
 
     .teams {
         font-size: 16px;
+        width: 80%;
+        height: auto;
+        justify-self: center;
     }
-  
+    .teams h2{
+        padding-bottom: 3%;
+    }
     footer{
         width: 100%;
         height: auto;
     }
-} 
+}
+
 
 /* For phones */
 @media (max-width: 475px) {
