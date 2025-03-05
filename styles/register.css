@@ -18,10 +18,13 @@ main{
 
 /* Background */
 body {
-    background: black;
-    color: white;
+    background-image: url('../assets/backgroundImages/Register.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-position: center;
+    color: white;  
 }
-
 /* Header */
 header {
     display: flex;
@@ -84,28 +87,28 @@ a:hover{
     box-shadow: 0 0 25px magenta;
     background: magenta;
 }
-.tournament-section {
+
+.Registration-section {
     padding: 100px;
 }
-.tournament-section h1{
+.Registration-section h1 {
     font-size: 40px;
     text-align: center;
 }
-
-.tournament-grid1 {
+.Registration-grid1 {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
-.tournament-grid2 {
+.Registration-grid2 {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
     padding: 50px;
 }
-.tournament-card {
+.Registration-card {
     background: #222;
     padding: 20px;
     border-radius: 20px;
@@ -114,28 +117,46 @@ a:hover{
     text-align: center;
     transition: all 0.3s ease-in-out;
 }
-.tournament-card:hover{
+.Registration-card:hover{
     box-shadow: 0 0 25px magenta; 
 }
 
-.tournament-card img {
+.Registration-card img {
     width: 100%;
+    height: 219px;
     border-radius: 20px;
     align-items: center;
 }
+.specialtext{
+    font-weight: bold;
+    justify-content: space-between;
+    letter-spacing: 2px;
+    word-spacing: 10px;
 
-.tournament-card button {
+}
+.btn-glow2 {
+    display: inline-block;
+    width: 150px;
+    height: fit-content;
+    margin-top: 20px;
+    padding: 12px 24px;
     background: cyan;
     color: black;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
     border-radius: 20px;
-    margin-top: 10px;
-    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 15px cyan;
+    font-size: 20px;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}
+.btn-glow2:hover {
+    box-shadow: 0 0 25px magenta;
+    background: magenta;
 }
 
-.tournament-card button:hover {
+
+.Registration-card button:hover {
     box-shadow: 0 0 25px magenta;
     background: magenta;
     color :#000;
@@ -163,6 +184,7 @@ footer {
         width: 100%;
         height: auto;
     }
+    
    
     .logo {
         font-size: 24px;
@@ -182,23 +204,32 @@ footer {
         margin: 0px;
        
     }
-    .tournament-section {
+    .Registration-section {
         padding: 80px 10px;
     }
 
-    .tournament-section h1 {
+    .Registration-section h1 {
         font-size: 30px;
     }
 
-    .tournament-grid1, .tournament-grid2 {
+    .Registration-grid1, .Registration-grid2 {
         padding: 10px;
     }
 
-    .tournament-card {
+    .Registration-card {
         width: 80%;
         height: auto;
         font-size: x-small;
         max-width: 200px;
+    }
+    .Registration-card img{
+        width: 100%;
+        height: auto;
+
+    }
+    .btn-glow2{
+        width: auto;
+        height: auto;
     }
 
     .nomore {
@@ -212,6 +243,9 @@ footer {
     header {
         width: 100%;
         height: fit-content;
+    }
+    body {
+        background-attachment: fixed; /* Fix for mobile performance */
     }
     main{
         flex: 1;
@@ -237,25 +271,33 @@ footer {
         font-size: 6px;
         
     }
-    .tournament-section {
+    .Registration-section {
         padding: 60px 1px;
     }
 
-    .tournament-section h1 {
+    .Registration-section h1 {
         font-size: 20px;
     }
 
-    .tournament-grid1, .tournament-grid2 {
+    .Registration-grid1, .Registration-grid2 {
+        width: 100%;
+        height: fit-content;
         padding: 10px;
-        font-size: 6px;
+        font-size: auto;
     }
 
-    .tournament-card {
+    .Registration-card {
         width: 100%;
         height: auto;
         max-width: 80px;
     }
-    .button {
+    .Registration-card img {
+        width: 100%;
+        height: fit-content;
+        border-radius: 10px;
+        align-items: center;
+    }
+    .btn-glow2{
         font-size: 6px;
         padding: 0px;
         margin: 0px;
