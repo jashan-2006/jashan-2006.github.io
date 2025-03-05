@@ -18,7 +18,7 @@ main{
 
 /* Background */
 body {
-    background-image: url('../assets/backgroundImages/Register.jpg');
+    background-image: url('../assets/backgroundImages/BackGround.jpg');
     background-size: cover; 
     background-repeat: no-repeat; 
     background-attachment: fixed;
@@ -113,7 +113,8 @@ a:hover{
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 10px cyan;
-    width: 350px;
+    width: 45%;
+    height: auto;
     text-align: center;
     transition: all 0.3s ease-in-out;
 }
@@ -123,7 +124,7 @@ a:hover{
 
 .Registration-card img {
     width: 100%;
-    height: 219px;
+    height: 60%;
     border-radius: 20px;
     align-items: center;
 }
