@@ -204,8 +204,22 @@ footer {
     }
 
     .video-item {
-        width: 45%;
+        width: 30%;
+        height: 200px;
+        padding: 4%;
+        margin: 0%;
+        iframe{
+            height: auto;
+            margin: 0%;
+        } 
+        
+        h3{
+            padding: 0%;
+            margin:0%;
+            font-size: 20px;
+        }
     }
+
     footer{
         width: 100%;
         height: auto;
@@ -243,10 +257,12 @@ footer {
     .video-section {
         padding-top: 20%;
     }
-
     .video-item {
         width: 90%;
+        height: fit-content;
+    
     }
+
     
     /* Footer */
     footer {
