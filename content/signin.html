@@ -5,15 +5,17 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Jashandeep Singh">
-    <title>AboutUs</title>
+    <title>Registration</title>
     <link rel="stylesheet" href="../styles/normalize.css">
-    <link rel="stylesheet" href="../styles/AboutUs.css">
+    <link rel="stylesheet" href="../styles/signin.css">
     <link rel="stylesheet" href="../styles/fontstyle.css">
     <link rel="icon" type="image/png" href="../assets/icons/favicon.ico">
 
 
 </head>
 <body>
+    
+
     <main> 
         <!-- Header Section -->
         <header>
@@ -26,15 +28,40 @@
                     <li><a href="../content/register.html">Register</a></li>
                     <li><a href="../content/teams.html">Teams</a></li>
                     <li><a href="../content/livestreams.html">Live Streams</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="../content/AboutUs.html">About Us</a></li>
                 </ul>
             </nav>
         </header>
     </main>
+    <div class="login-wrapper">
+    <div class="login-container">
+        <h2 class="login-title">Login</h2>
+        <form action="#" method="POST">
+            <div class="input-group">
+                <label for="login-input">Email or User id</label>
+                <input type="text"  id="login-input" name="login-input" placeholder="Email or User id" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+
+            <button type="submit" class="login-button">Login</button>
+        </form>
+
+        <p class="register-btn">
+            Don't have an account? <a href="../content/signup.html">Register here</a>
+        </p>
+    </div>
+    </div>
+
+
+</body>
         <!-- Footer Section -->
         <footer>
             <p>&copy; 2025 JA eSports. Enter the Future.</p>
         </footer>
     
-</body>
+
 </html>

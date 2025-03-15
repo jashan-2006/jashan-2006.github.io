@@ -1,0 +1,271 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+html,body{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+main{
+    flex: 1;
+}
+
+
+
+/* Background */
+body {
+    background-image: url('../assets/backgroundImages/BackGround.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-position: center;
+    color: white;  
+
+    
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    padding: 0% ;
+    background: rgb(20, 20, 20);
+    box-shadow: 0 0 10px cyan;
+    position: fixed;
+    width: 100%;
+    height: 8%;
+}
+
+.logo {
+    font-size: 135%;
+    padding-right: 18%;
+    font-weight: bold;
+    color: cyan;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-left: 25%;   
+    justify-items: end;
+    padding-right: 0% ;
+}
+
+nav ul li {
+    padding: 10px;
+    margin: 10px;
+    font-size: 110%;
+    font-weight: bold;
+    color: cyan;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a {
+    color: black;
+    align-items: center;
+}
+a{
+ text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 25%;
+    padding: 2%;
+    margin-top: auto; 
+    background: cyan;
+    width: 150px;
+    height: auto;
+    padding: 0px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px cyan;
+    transition: all 0.3s ease-in-out;
+    
+}
+a:hover{
+    box-shadow: 0 0 25px magenta;
+    background: magenta;
+}
+/* Login Box */
+.login-wrapper {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin-top: -8%; /* Adjust for fixed header height */
+}
+.login-container {
+    background: #111827;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    border: 1px solid #00d9ff;
+    width: 40%;
+    height: auto;
+    text-align: center;
+    align-self: center;
+
+}
+
+/* Title */
+.login-title {
+    color:cyan;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: cyan;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: black;
+    color:white;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    box-shadow: 0 0 8px cyan;
+    background:black;
+}
+
+/* Login Button */
+.login-button {
+    width: 40%;
+    margin-top: 5%;
+    background: cyan;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    justify-self: center;
+}
+
+.login-button:hover {
+    background:magenta;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+/* Register Text */
+.register-btn {
+    justify-self: center;
+    
+    padding: 5%;
+    font-size: 14px;
+}
+
+.register-btn a {
+    color: black;
+    font-weight: bold;
+    padding: 2%;
+    text-decoration: none;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 0px;
+    background: rgba(20, 20, 20, 0.8);
+    color: cyan;
+    box-shadow: 0 0 10px cyan;
+    margin-top: 0px;
+}
+/* Media Queries for Responsiveness */
+
+/* For tablets */
+ @media (max-width: 912px) {
+    /* Header */
+    header {
+        width: 100%;
+        height: auto;
+    }
+   
+    .logo {
+        font-size: 24px;
+        padding: 0%;
+        margin: 0%;
+    }
+    nav ul{
+        padding: 0px;
+        padding-left:0%;
+        margin: 0px;
+    }
+    nav ul li a {
+        width:80px;
+        height: auto;
+        font-size: 12px;
+        padding: 0px 0px;
+        margin: 0px;
+       
+    }
+    footer{
+        width: 100%;
+        height: auto;
+    }
+}
+/* For phones */
+@media (max-width: 475px) {
+    /* Header */
+    header {
+        width: 100%;
+        height: fit-content;
+    }
+    .logo {
+        font-size: 80%;
+        padding: 0%;
+        margin: 0%;
+        
+    }
+    nav ul {
+       padding: 0px;
+       padding-left: 27%;
+       margin: 0px;
+    }
+    nav ul li {
+        padding: 2%;
+        margin: 0px;
+    }
+    nav ul li a {
+        width: 40px;
+        height: auto;
+        font-size: 6px;
+        
+    }
+    
+    /* Footer */
+    footer {
+        padding: auto;
+        font-size: xx-small;
+        width: 100%;
+        height: auto;
+        justify-items: center;
+    }
+}
