@@ -2,26 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Jashandeep Singh">
-    <title>Registration</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/signin.css">
     <link rel="stylesheet" href="../styles/fontstyle.css">
     <link rel="icon" type="image/png" href="../assets/icons/favicon.ico">
-
-
 </head>
 <body>
-    
-
     <main> 
         <!-- Header Section -->
         <header>
-           
             <div class="logo">⚡ JA eSports</div>
-    
             <nav>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
@@ -33,35 +26,59 @@
             </nav>
         </header>
     </main>
+
     <div class="login-wrapper">
-    <div class="login-container">
-        <h2 class="login-title">Login</h2>
-        <form action="#" method="POST">
-            <div class="input-group">
-                <label for="login-input">Email or User id</label>
-                <input type="text"  id="login-input" name="login-input" placeholder="Email or User id" required>
-            </div>
+        <div class="login-container">
+            <h2 class="login-title">Login</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="login-input">Email or User ID</label>
+                    <input type="text" id="login-input" name="login-input" placeholder="Email or User ID" required>
+                </div>
 
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Password" required>
-            </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
 
-            <button type="submit" class="login-button">Login</button>
-        </form>
+                <button type="submit" class="login-button">Login</button>
+            </form>
 
-        <p class="register-btn">
-            Don't have an account? <a href="../content/signup.html">Register here</a>
-        </p>
+            <p class="register-btn">
+                Don't have an account? <a href="../content/signup.html">Register here</a>
+            </p>
+        </div>
     </div>
-    </div>
 
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 JA eSports. Enter the Future.</p>
+    </footer>
 
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Get form data
+            const loginInput = document.getElementById('login-input').value;
+            const password = document.getElementById('password').value;
+
+            // Retrieve users from local storage
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+
+            // Check if user exists
+            const user = users.find(user => 
+                (user.email === loginInput || user.username === loginInput) && 
+                user.password === password
+            );
+
+            if (user) {
+                alert('Login successful!');
+                window.location.href = '../index.html'; // Redirect to home page
+            } else {
+                alert('Invalid email/user ID or password. Please try again.');
+            }
+        });
+    </script>
 </body>
-        <!-- Footer Section -->
-        <footer>
-            <p>&copy; 2025 JA eSports. Enter the Future.</p>
-        </footer>
-    
-
 </html>

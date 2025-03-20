@@ -30,27 +30,27 @@
     <div class="login-wrapper">
         <div class="login-container">
             <h2 class="login-title">Sign Up</h2>
-            <form action="/signup" method="POST">
+            <form id="signup-form">
                 <div class="input-group">
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username" placeholder="Username" required>
                 </div>
-            
+
                 <div class="input-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Email" required>
                 </div>
-            
+
                 <div class="input-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Password" required>
                 </div>
-            
+
                 <div class="input-group">
                     <label for="confirm-password">Confirm Password</label>
                     <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
                 </div>
-            
+
                 <button type="submit" class="login-button">Sign Up</button>
             </form>
 
@@ -64,5 +64,39 @@
     <footer>
         <p>&copy; 2025 JA eSports. Enter the Future.</p>
     </footer>
+
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Get form data
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            // Check if passwords match
+            if (password !== confirmPassword) {
+                alert('Passwords do not match. Please try again.');
+                return;
+            }
+
+            // Create user object
+            const user = {
+                username,
+                email,
+                password, // Note: In a real-world scenario, never store plain-text passwords
+                timestamp: new Date().toISOString(),
+            };
+
+            // Save to local storage
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+            users.push(user);
+            localStorage.setItem('users', JSON.stringify(users));
+
+            alert('Signup successful!');
+            window.location.href = '../content/signin.html'; // Redirect to login page
+        });
+    </script>
 </body>
 </html>
