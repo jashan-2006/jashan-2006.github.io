@@ -87,86 +87,101 @@ a:hover{
     box-shadow: 0 0 25px magenta;
     background: magenta;
 }
-
-.Registration-section {
-    padding: 100px;
-}
-.Registration-section h1 {
-    font-size: 40px;
+.search-bar {
     text-align: center;
-}
-.Registration-grid1 {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-.Registration-grid2 {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 50px;
-}
-.Registration-card {
-    background: #222;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px cyan;
-    width: 45%;
-    height: auto;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-}
-.Registration-card:hover{
-    box-shadow: 0 0 25px magenta; 
+    margin: 20px 0;
 }
 
-.Registration-card img {
-    width: 100%;
-    height: 60%;
-    border-radius: 20px;
-    align-items: center;
+.search-bar input {
+    margin-top: 5%;
+    padding: 10px;
+    width: 300px;
+    border: 2px solid cyan;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
 }
-.specialtext{
-    font-weight: bold;
-    justify-content: space-between;
-    letter-spacing: 2px;
-    word-spacing: 10px;
 
-}
-.btn-glow2 {
-    display: inline-block;
-    width: 150px;
-    height: fit-content;
-    margin-top: 20px;
-    padding: 12px 24px;
-    background: cyan;
+.search-bar button {
+    padding: 10px 20px;
+    background-color: cyan;
     color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     font-weight: bold;
-    text-decoration: none;
-    border-radius: 20px;
-    box-shadow: 0 0 15px cyan;
-    font-size: 20px;
-    letter-spacing: 1px;
-    word-spacing: 5px;
-}
-.btn-glow2:hover {
-    box-shadow: 0 0 25px magenta;
-    background: magenta;
 }
 
-
-.Registration-card button:hover {
-    box-shadow: 0 0 25px magenta;
-    background: magenta;
-    color :#000;
+.search-bar button:hover {
+    background-color: magenta;
 }
-.nomore{
-    font-size: 30px;
-    padding: 75px;
+.register-button {
+    display: inline-block;
     margin-top: 10px;
+    padding: 10px 20px;
+    background-color: cyan;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: magenta;
+}
+
+
+.games-section {
+    padding: 20px;
     text-align: center;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.game-card {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px cyan;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px magenta;
+}
+
+.game-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.game-card h2 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.game-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: cyan;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.game-card a:hover {
+    background-color: magenta;
 }
 
 /* Footer */
