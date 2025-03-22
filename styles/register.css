@@ -13,6 +13,10 @@ html,body{
 
 main{
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the loading spinner vertically */
+    align-items: center; /* Center the loading spinner horizontally */
 }
 
 
@@ -115,10 +119,50 @@ a:hover{
 .search-bar button:hover {
     background-color: magenta;
 }
-.register-button {
-    display: inline-block;
-    margin-top: 10px;
+/* Loading Spinner */
+.loading-spinner {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid cyan; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto; /* Center the spinner */
+    display: none; /* Hidden by default */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.game-card {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px cyan;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.game-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.game-card h2 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+.game-card p {
+    margin: 10px 0;
+}
+.game-card .register-button {
+    margin-top: auto; /* Push the button to the bottom */
     padding: 10px 20px;
+    align-self: center;
     background-color: cyan;
     color: black;
     text-decoration: none;
@@ -127,7 +171,8 @@ a:hover{
     transition: background-color 0.3s ease;
 }
 
-.register-button:hover {
+
+.game-card .register-button:hover {
     background-color: magenta;
 }
 
@@ -136,36 +181,18 @@ a:hover{
     padding: 20px;
     text-align: center;
 }
-
 .games-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 50px;
     padding: 20px;
+    margin-bottom: 10%;
 }
 
-.game-card {
-    background-color: #333;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 0 10px cyan;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
 .game-card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px magenta;
-}
-
-.game-card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.game-card h2 {
-    margin: 10px 0;
-    font-size: 20px;
 }
 
 .game-card a {
@@ -191,7 +218,7 @@ footer {
     background: rgba(20, 20, 20, 0.8);
     color: cyan;
     box-shadow: 0 0 10px cyan;
-    margin-top: 0px;
+    margin-top: auto;
    
 }
 /* Media Queries for Responsiveness */

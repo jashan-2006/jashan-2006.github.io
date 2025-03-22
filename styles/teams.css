@@ -17,8 +17,12 @@ main{
 
 /* Background */
 body {
-    background: black;
-    color: white;
+    background-image: url('../assets/backgroundImages/BackGround.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-position: center;
+    color: white;  
 }
 
 /* Header */
@@ -83,6 +87,114 @@ a:hover{
     box-shadow: 0 0 25px magenta;
     background: magenta;
 }
+/* Search Bar */
+.search-container {
+    margin-top: 5%;
+    text-align: center;
+    padding: 20px;
+}
+
+#search-input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid cyan;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+#search-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background: cyan;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#search-button:hover {
+    background: magenta;
+    box-shadow: 0 0 10px magenta;
+}
+/* Read More Button */
+.read-more-button {
+    
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: cyan; 
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Teams Container */
+.teams-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    text-align: center;
+}
+/* Team Cards */
+.team-card {
+    background: rgba(20, 20, 20, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    width: 70%; 
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px cyan;
+    transition: all 0.3s ease-in-out;
+    text-align: left;
+}
+
+
+/* Read More Button */
+.team-card .read-more-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: cyan; 
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.team-card .read-more-button:hover {
+    background-color: magenta;
+    color: black;
+}
+.team-card img {
+    width: 100%;
+    max-height: fit-content;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.team-card h2 {
+    color: cyan;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.team-card p {
+    color: white;
+    margin: 5px 0;
+}
+
+.team-card a {
+    margin-top: 10px;
+    color: cyan;
+}
+
+
+
 /* Footer */
 footer {
     text-align: center;
@@ -120,6 +232,10 @@ footer {
         margin: 0px;
        
     }
+    .team-card {
+        width: 90%;
+        height: auto;
+    }
     footer{
         width: 100%;
         height: auto;
@@ -152,6 +268,10 @@ footer {
         height: auto;
         font-size: 6px;
         
+    }
+    .team-card {
+        width: 100%;
+        height: auto;
     }
     
     /* Footer */
