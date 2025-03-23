@@ -192,7 +192,66 @@ a:hover{
     margin-top: 10px;
     color: cyan;
 }
+/* Search Results Container */
+.search-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+/* Search Result Card */
+.result-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius:10px;
+    padding: 16px;
+    width: calc(33.33% - 14px); /* 3 cards per row */
+    box-sizing: border-box;
+    box-shadow: 0 0 10px cyan;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Image Styling */
+.result-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+/* Title Styling */
+.result-item h2 {
+    font-size: 18px;
+    margin: 0 0 8px;
+    color: cyan;
+}
+
+/* Snippet Styling */
+.result-item p {
+    font-size: 14px;
+    color: white;
+    margin: 0 0 12px;
+}
+
+/* Link Styling */
+.result-item a {
+    display: inline-block;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* No Results Message */
+.no-results {
+    text-align: center;
+    color: #4d5156;
+    font-size: 16px;
+    width: 100%;
+}
 
 
 /* Footer */
@@ -240,6 +299,9 @@ footer {
         width: 100%;
         height: auto;
     }
+    .result-item {
+        width: calc(50% - 10px); /* 2 cards per row on tablets */
+    }
 }
 /* For phones */
 @media (max-width: 475px) {
@@ -273,7 +335,9 @@ footer {
         width: 100%;
         height: auto;
     }
-    
+    .result-item {
+        width: 100%; /* 1 card per row on phones */
+    }
     /* Footer */
     footer {
         padding: auto;
