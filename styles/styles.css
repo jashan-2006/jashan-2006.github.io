@@ -80,7 +80,7 @@ header {
 nav ul {
     display: flex;
     list-style: none;
-    margin-left: 25%; 
+    margin-left: 8%; 
     justify-items: end;
     padding-right: 0% ;
 }
