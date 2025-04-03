@@ -135,10 +135,10 @@ a:hover{
 
 .btn-glow {
     display: inline-block;
-    width: 500px;
-    height: 60px;
+    width: fit-content;
+    height: fit-content;
     margin-top: 30px;
-    padding: 12px 0px;
+    padding: 12px 10px;
     background: cyan;
     color: black;
     font-weight: bold;
@@ -148,8 +148,8 @@ a:hover{
 }
 .btn-glow2 {
     display: inline-block;
-    width: 150px;
-    height: 30px;
+    width: fit-content;
+    height: fit-content;
     margin-top: 20px;
     padding: 12px 24px;
     background: cyan;
