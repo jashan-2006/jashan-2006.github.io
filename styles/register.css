@@ -240,10 +240,8 @@ footer {
 @media (max-width: 912px) {
     header {
         width: 100%;
-        height: auto;
+        height: fit-content;
     }
-    
-   
     .logo {
         font-size: 24px;
         padding: 0%;
@@ -262,28 +260,8 @@ footer {
         margin: 0px;
        
     }
-    .Registration-section {
-        padding: 80px 10px;
-    }
-
-    .Registration-section h1 {
-        font-size: 30px;
-    }
-
-    .Registration-grid1, .Registration-grid2 {
-        padding: 10px;
-    }
-
-    .Registration-card {
-        width: 80%;
-        height: auto;
-        font-size: x-small;
-        max-width: 200px;
-    }
-    .Registration-card img{
-        width: 100%;
-        height: auto;
-
+    .search-bar {
+        padding-top: 5%;
     }
     .btn-glow2{
         width: auto;
@@ -329,31 +307,8 @@ footer {
         font-size: 6px;
         
     }
-    .Registration-section {
-        padding: 60px 1px;
-    }
-
-    .Registration-section h1 {
-        font-size: 20px;
-    }
-
-    .Registration-grid1, .Registration-grid2 {
-        width: 100%;
-        height: fit-content;
-        padding: 10px;
-        font-size: auto;
-    }
-
-    .Registration-card {
-        width: 100%;
-        height: auto;
-        max-width: 80px;
-    }
-    .Registration-card img {
-        width: 100%;
-        height: fit-content;
-        border-radius: 10px;
-        align-items: center;
+    .search-bar {
+        padding: 2%;
     }
     .btn-glow2{
         font-size: 6px;
@@ -362,7 +317,12 @@ footer {
         width: auto;
         height: auto;
     }
-
+    .games-section {
+        h1{
+            font-size: 20px;
+        }
+    }
+    
     .nomore {
         font-size: 24px;
         padding: 50px;
