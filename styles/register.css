@@ -48,6 +48,21 @@ header {
     color: cyan;
     align-items: center;
 }
+a.no-effects, 
+a.no-effects:hover, 
+a.no-effects:active, 
+a.no-effects:visited, 
+a.no-effects:focus {
+    all: unset !important;
+    color: inherit !important;
+    cursor: pointer !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    display: inline !important;
+}
 
 nav ul {
     display: flex;
@@ -363,3 +378,24 @@ footer {
         }
     }
     
+/* For medium screens like MacBook Air */
+@media (min-width: 913px) and (max-width: 1460px) {
+    header {
+        height: fit-content;
+    }
+    
+    .logo {
+        padding-right: 10%;
+        font-size: 120%;
+    }
+    
+    nav ul {
+        margin-left: 15%;
+        gap: 5%;
+    }
+    
+    nav ul li a {
+        width: 120px;
+        font-size: 14px;
+    }
+}
