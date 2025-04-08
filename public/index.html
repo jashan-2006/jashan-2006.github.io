@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jashandeep Singh">
+    <title>JA eSports Hub</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/fontstyle.css">
+    
+
+
+</head>
+<body>
+
+    <div class="video-container">
+        <!-- Free Fire Video -->
+        <div class="video-wrapper">
+            <video autoplay loop muted playsinline>
+                <source src="./assets/backgroundVideos/FreeFireXPubg.mp4" type="video/mp4">
+                Your browser does not support the video .
+            </video>
+            <div class="video-overlay"></div> <!-- Dark overlay -->
+        </div>
+    
+        <!-- PUBG Video -->
+        <div class="video-wrapper">
+            <video autoplay loop muted playsinline>
+                <source src="./assets/backgroundVideos/Pubg.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay"></div> <!-- Dark overlay -->
+        </div>
+    </div>
+   
+   
+
+<main> 
+    <!-- Header Section -->
+    <header>
+       
+        <div class="logo"><a href="#" class="no-effects">⚡ JA eSports</a></div>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="./content/register.html">Register</a></li>
+                <li><a href="./content/teams.html">Teams</a></li>
+                <li><a href="./content/livestreams.html">Live Streams</a></li>
+                <li><a href="./content/AboutUs.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to <span class="neon-text">JA eSports</span></h1>
+        <p>The Ultimate Battle Zone</p>
+        <a href="content/livestreams.html" class="btn-glow">View Matches</a>
+    </section>
+
+    <!-- Matches Section -->
+    <section class="matches">
+        <h2>⚔️ Upcoming Matches</h2>
+        <div class="match-list">
+            <div class="match-card">
+                <img src="https://esportsinsider.com/wp-content/uploads/2024/11/unnamed-2.jpg" alt="Match">
+                <h3>FREE FIRE</h3>
+                <p>Tournaments are live! <br> Registeration is Live!</p>
+                <a class="btn-glow2" href="https://battlefy.com/ram-esportss/ram-esports/67dbd222464ad6002ccf1aa1/info?infoTab=details&utm_source=battlefy&utm_campaign=homepage&utm_medium=tournament_card">View Details</a>
+            </div>
+            <div class="match-card">
+                <img src="https://wstatic-prod-boc.krafton.com/common/news/20241008/vzMx9dUa.png" alt="Match">
+                <h3>PUBG</h3>
+                <p> Tournaments are live! <br> Registeration is Live!</p>
+                <a class="btn-glow2" href="https://battlefy.com/prime-league/prime-league/67c85ef8963860004141bb13/info?infoTab=details&utm_source=battlefy&utm_campaign=homepage&utm_medium=tournament_card">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teams Section -->
+    <section class="teams">
+        <h2>🔥 Top eSports Teams</h2>
+        <div class="team-list">
+            <div class="team-card">
+                <img src="assets/logos/team1.jpg" alt="Team 1">
+                <p>Free Fire Rank #1</p>
+                <h3>Team Falcons </h3>
+            </div>
+            <div class="team-card">
+                <img src="assets/logos/team2.png" width="870"  alt="Team 2" >
+                <p>Pubg  Rank #1</p>
+                <h3>Twisted Minds </h3>
+            </div>
+        </div>
+    </section>
+    <!-- Review Form -->
+<section id="reviewSection" style="text-align: center; padding: 20px;">
+    <h1 style="color: cyan;">💬 Leave a Review</h1>
+    <form id="reviewForm" style="margin-top: 20px;">
+      <input type="text" id="username" placeholder="Your Name" required style="padding: 10px; margin: 5px;"><br>
+      <textarea id="message" placeholder="Your Review" required style="padding: 10px; margin: 5px;"></textarea><br>
+  
+      <!-- Star Rating -->
+      <div id="starRating" style="font-size: 30px; margin: 10px 0;">
+        <span data-star="1">★</span>
+        <span data-star="2">★</span>
+        <span data-star="3">★</span>
+        <span data-star="4">★</span>
+        <span data-star="5">★</span>
+      </div>
+      <input type="hidden" id="rating" value="0">
+  
+      <button type="submit" style="padding: 10px 20px; background-color: #00ffff; border: none; border-radius: 10px; font-weight: bold;">Submit</button>
+    </form>
+    <p id="responseMsg" style="color: lightgreen;"></p>
+  </section>
+  
+  <!-- Reviews Container -->
+  <section style="padding: 20px;">
+    <h2 style="text-align: center; color: cyan;">📝 User Reviews</h2>
+    <div id="reviewsContainer" style="margin-top: 20px;"></div>
+  </section>
+  
+
+  
+</main>
+   
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 JA eSports. Enter the Future of Competitive Gaming.</p>
+    </footer>
+    <script>
+        const stars = document.querySelectorAll("#starRating span");
+        const ratingInput = document.getElementById("rating");
+      
+        let selectedRating = 0;
+      
+        stars.forEach((star, i) => {
+          star.style.cursor = "pointer";
+      
+          star.addEventListener("mouseover", () => {
+            highlightStars(i + 1);
+          });
+      
+          star.addEventListener("mouseout", () => {
+            highlightStars(selectedRating);
+          });
+      
+          star.addEventListener("click", () => {
+            selectedRating = i + 1;
+            ratingInput.value = selectedRating;
+          });
+        });
+      
+        function highlightStars(rating) {
+          stars.forEach((s, i) => {
+            s.style.color = i < rating ? "gold" : "gray";
+          });
+        }
+      
+        // Handle submit
+        document.getElementById("reviewForm").addEventListener("submit", async function (e) {
+          e.preventDefault();
+          const username = document.getElementById("username").value;
+          const message = document.getElementById("message").value;
+          const rating = parseInt(document.getElementById("rating").value) || 0;
+      
+          const res = await fetch("/api/reviews", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username, message, rating }),
+          });
+      
+          const data = await res.json();
+          document.getElementById("responseMsg").innerText = data.message;
+      
+          document.getElementById("username").value = "";
+          document.getElementById("message").value = "";
+          document.getElementById("rating").value = "0";
+          selectedRating = 0;
+          highlightStars(0);
+      
+          loadReviews();
+        });
+      
+        // Load reviews
+        async function loadReviews() {
+          const res = await fetch("/api/reviews");
+          const reviews = await res.json();
+          const container = document.getElementById("reviewsContainer");
+          container.innerHTML = "";
+      
+          if (reviews.length === 0) {
+            container.innerHTML = "<p style='text-align:center; color: white;'>No reviews yet. Be the first!</p>";
+            return;
+          }
+      
+          reviews.reverse().forEach((rev, index) => {
+            const div = document.createElement("div");
+            div.className = "review-card";
+            div.style = `
+              background-color: #111;
+              border: 1px solid cyan;
+              border-radius: 10px;
+              padding: 10px;
+              margin: 15px auto;
+              max-width: 600px;
+              color: white;
+              position: relative;
+            `;
+      
+            const stars = "★".repeat(rev.rating || 0) + "☆".repeat(5 - (rev.rating || 0));
+      
+            div.innerHTML = `
+              <strong>${rev.username}</strong><br>
+              <em>${new Date(rev.date).toLocaleString()}</em><br>
+              <div style="color: gold; font-size: 20px;">${stars}</div>
+              <p>${rev.message}</p>
+              <button onclick="editReview(${index})" style="margin-right: 10px;">✏️ Edit</button>
+              <button onclick="deleteReview(${index})">🗑️ Delete</button>
+            `;
+            container.appendChild(div);
+          });
+        }
+      
+        // Edit review
+        function editReview(index) {
+          fetch("/api/reviews")
+            .then(res => res.json())
+            .then(data => {
+              const rev = data[data.length - 1 - index]; // reversed
+              document.getElementById("username").value = rev.username;
+              document.getElementById("message").value = rev.message;
+              selectedRating = rev.rating;
+              ratingInput.value = rev.rating;
+              highlightStars(rev.rating);
+              deleteReview(index); // Remove and re-add
+            });
+        }
+      
+        // Delete review
+        async function deleteReview(index) {
+          await fetch(`/api/reviews/delete/${index}`, { method: "DELETE" });
+          loadReviews();
+        }
+      
+        loadReviews();
+      </script>
+      
+    
+
+</body>
+</html>
+
