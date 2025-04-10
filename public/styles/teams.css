@@ -269,14 +269,145 @@ a:hover{
 }
 
 
-/* Footer */
+/* Professional Footer Styles */
 footer {
-    text-align: center;
-    padding: 0px;
-    background: rgba(20, 20, 20, 0.8);
+    box-shadow: cyan 0px 0px 10px;
+    background-color: #000;
+    padding: 40px 0 0;
+    margin: 0%;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 ;
+    padding: 0 ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
+}
+
+.footer-logo h2{
     color: cyan;
-    box-shadow: 0 0 10px cyan;
-    margin-top: 0px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footer-logo p {
+    text-align: center;
+    color: #aaa;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 70%;
+    justify-content: space-between;
+}
+
+.footer-column {
+    margin-bottom: 30px;
+    width: 23%;
+}
+
+.footer-column h3{
+    color: cyan;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #aaa;
+    transition: color 0.3s;
+    background: none;
+    box-shadow: none;
+    width: auto;
+    padding: 0;
+    border-radius: 0;
+}
+
+.footer-column ul li a:hover {
+    color: cyan;
+    background: none;
+    box-shadow: none;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: #aaa;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+    background: none;
+    box-shadow: none;
+    width: auto;
+    padding: 0;
+}
+
+.social-links a:hover {
+    color: cyan;
+    background: none;
+    box-shadow: none;
+}
+
+.email-link a {
+    color: #aaa;
+    transition: color 0.3s;
+    background: none;
+    box-shadow: none;
+    width: auto;
+    padding: 0;
+}
+
+.email-link a:hover {
+    color: cyan;
+    background: none;
+    box-shadow: none;
+}
+
+.footer-bottom {
+    width: 100%;
+    background-color: #000;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-bottom p {
+    width: 100%;
+    margin: 5px 0;
+    color: #aaa;
+    font-size: 0.8rem;
+}
+
+.footer-bottom i.fa-heart {
+    color: #ff0000;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .policy-container {
+        margin-top: 80px;
+    }
+    
+    .cookie-types {
+        grid-template-columns: 1fr;
+    }
 }
 /* Media Queries for Responsiveness */
 
@@ -355,7 +486,6 @@ footer {
     }
     /* Footer */
     footer {
-        padding: auto;
         font-size: xx-small;
         width: 100%;
         height: auto;

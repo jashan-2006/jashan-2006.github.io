@@ -255,7 +255,6 @@ footer {
     
     /* Footer */
     footer {
-        padding: auto;
         font-size: xx-small;
         width: 100%;
         height: auto;
@@ -281,5 +280,167 @@ footer {
     nav ul li a {
         width: 120px;
         font-size: 14px;
+    }
+}
+/* ... (keep all your existing styles above this) ... */
+
+/* Team Section Updates */
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid cyan;
+    margin-bottom: 15px;
+}
+
+.team-member .bio {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+/* Professional Footer Styles */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 0 0;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-logo h3 {
+    color: cyan;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    color: #aaa;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: space-between;
+}
+
+.footer-column {
+    margin-bottom: 30px;
+    width: 23%;
+}
+
+.footer-column h4 {
+    color: cyan;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #aaa;
+    transition: color 0.3s;
+    background: none;
+    box-shadow: none;
+    width: auto;
+    padding: 0;
+    border-radius: 0;
+}
+
+.footer-column ul li a:hover {
+    color: cyan;
+    background: none;
+    box-shadow: none;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: #aaa;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+    background: none;
+    box-shadow: none;
+    width: auto;
+    padding: 0;
+}
+
+.social-links a:hover {
+    color: cyan;
+    background: none;
+    box-shadow: none;
+}
+
+.email-link a {
+    color: #aaa;
+    transition: color 0.3s;
+    background: none;
+    box-shadow: none;
+    width: auto;
+    padding: 0;
+}
+
+.email-link a:hover {
+    color: cyan;
+    background: none;
+    box-shadow: none;
+}
+
+.footer-bottom {
+    background-color: #111;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+    color: #777;
+    font-size: 0.8rem;
+}
+
+.footer-bottom i.fa-heart {
+    color: #ff0000;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+    
+    .footer-links {
+        width: 100%;
+    }
+    
+    .footer-column {
+        width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-column {
+        width: 100%;
     }
 }

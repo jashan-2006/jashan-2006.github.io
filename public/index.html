@@ -1,264 +1,406 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <!-- Meta Information -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Jashandeep Singh">
+  <title>JA eSports Hub</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Jashandeep Singh">
-    <title>JA eSports Hub</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/fontstyle.css">
-    
+  <!-- Favicon and Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/fontstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Inline Styles -->
+  <style>
+    /* Review Card Styling */
+    .review-card {
+      background: rgba(20, 20, 20, 0.8);
+      border: 1px solid #00ffff;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 15px 0;
+      color: white;
+    }
+
+    /* Review Header */
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    /* Review Rating */
+    .review-rating {
+      color: gold;
+      font-size: 1.2em;
+    }
+
+    /* Review Message */
+    .review-message {
+      margin: 10px 0;
+      line-height: 1.5;
+    }
+
+    /* Review Footer */
+    .review-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+
+    /* Delete Button */
+    .delete-btn {
+      cursor: pointer;
+    }
+
+    .loading, .no-reviews {
+      text-align: center;
+      padding: 20px;
+      color: #00ffff;
+    }
+
+    .error {
+      text-align: center;
+      padding: 20px;
+      color: #ff5555;
+    }
+
+    .error button {
+      background: #00ffff;
+      border: none;
+      padding: 5px 15px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
 
 </head>
 <body>
 
-    <div class="video-container">
-        <!-- Free Fire Video -->
-        <div class="video-wrapper">
-            <video autoplay loop muted playsinline>
-                <source src="./assets/backgroundVideos/FreeFireXPubg.mp4" type="video/mp4">
-                Your browser does not support the video .
-            </video>
-            <div class="video-overlay"></div> <!-- Dark overlay -->
-        </div>
-    
-        <!-- PUBG Video -->
-        <div class="video-wrapper">
-            <video autoplay loop muted playsinline>
-                <source src="./assets/backgroundVideos/Pubg.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="video-overlay"></div> <!-- Dark overlay -->
-        </div>
+  <!-- Video Background Section -->
+  <div class="video-container">
+    <!-- Free Fire Video -->
+    <div class="video-wrapper">
+      <video autoplay loop muted playsinline>
+        <source src="./assets/backgroundVideos/FreeFireXPubg.mp4" type="video/mp4">
+        Your browser does not support the video.
+      </video>
+      <div class="video-overlay"></div> <!-- Dark overlay -->
     </div>
-   
-   
+  
+    <!-- PUBG Video -->
+    <div class="video-wrapper">
+      <video autoplay loop muted playsinline>
+        <source src="./assets/backgroundVideos/Pubg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-overlay"></div> <!-- Dark overlay -->
+    </div>
+  </div>
 
-<main> 
+  <main>
     <!-- Header Section -->
     <header>
-       
-        <div class="logo"><a href="#" class="no-effects">⚡ JA eSports</a></div>
-
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="./content/register.html">Register</a></li>
-                <li><a href="./content/teams.html">Teams</a></li>
-                <li><a href="./content/livestreams.html">Live Streams</a></li>
-                <li><a href="./content/AboutUs.html">About Us</a></li>
-            </ul>
-        </nav>
+      <div class="logo"><a href="#" class="no-effects">⚡ JA eSports</a></div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="./content/register.html">Register</a></li>
+          <li><a href="./content/teams.html">Teams</a></li>
+          <li><a href="./content/livestreams.html">Live Streams</a></li>
+          <li><a href="./content/AboutUs.html">About Us</a></li>
+        </ul>
+      </nav>
     </header>
-
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Welcome to <span class="neon-text">JA eSports</span></h1>
-        <p>The Ultimate Battle Zone</p>
-        <a href="content/livestreams.html" class="btn-glow">View Matches</a>
+      <h1>Welcome to <span class="neon-text">JA eSports</span></h1>
+      <p>The Ultimate Battle Zone</p>
+      <a href="content/livestreams.html" class="btn-glow">View Matches</a>
     </section>
 
     <!-- Matches Section -->
     <section class="matches">
-        <h2>⚔️ Upcoming Matches</h2>
-        <div class="match-list">
-            <div class="match-card">
-                <img src="https://esportsinsider.com/wp-content/uploads/2024/11/unnamed-2.jpg" alt="Match">
-                <h3>FREE FIRE</h3>
-                <p>Tournaments are live! <br> Registeration is Live!</p>
-                <a class="btn-glow2" href="https://battlefy.com/ram-esportss/ram-esports/67dbd222464ad6002ccf1aa1/info?infoTab=details&utm_source=battlefy&utm_campaign=homepage&utm_medium=tournament_card">View Details</a>
-            </div>
-            <div class="match-card">
-                <img src="https://wstatic-prod-boc.krafton.com/common/news/20241008/vzMx9dUa.png" alt="Match">
-                <h3>PUBG</h3>
-                <p> Tournaments are live! <br> Registeration is Live!</p>
-                <a class="btn-glow2" href="https://battlefy.com/prime-league/prime-league/67c85ef8963860004141bb13/info?infoTab=details&utm_source=battlefy&utm_campaign=homepage&utm_medium=tournament_card">View Details</a>
-            </div>
+      <h2>⚔️ Upcoming Matches</h2>
+      <div class="match-list">
+        <!-- Free Fire Match -->
+        <div class="match-card">
+          <img src="https://esportsinsider.com/wp-content/uploads/2024/11/unnamed-2.jpg" alt="Match">
+          <h3>FREE FIRE</h3>
+          <p>Tournaments are live! <br> Registration is Live!</p>
+          <a class="btn-glow2" href="https://battlefy.com/ram-esportss/ram-esports/67dbd222464ad6002ccf1aa1/info?infoTab=details&utm_source=battlefy&utm_campaign=homepage&utm_medium=tournament_card">View Details</a>
         </div>
+        <!-- PUBG Match -->
+        <div class="match-card">
+          <img src="https://wstatic-prod-boc.krafton.com/common/news/20241008/vzMx9dUa.png" alt="Match">
+          <h3>PUBG</h3>
+          <p>Tournaments are live! <br> Registration is Live!</p>
+          <a class="btn-glow2" href="https://battlefy.com/prime-league/prime-league/67c85ef8963860004141bb13/info?infoTab=details&utm_source=battlefy&utm_campaign=homepage&utm_medium=tournament_card">View Details</a>
+        </div>
+      </div>
     </section>
 
     <!-- Teams Section -->
     <section class="teams">
-        <h2>🔥 Top eSports Teams</h2>
-        <div class="team-list">
-            <div class="team-card">
-                <img src="assets/logos/team1.jpg" alt="Team 1">
-                <p>Free Fire Rank #1</p>
-                <h3>Team Falcons </h3>
-            </div>
-            <div class="team-card">
-                <img src="assets/logos/team2.png" width="870"  alt="Team 2" >
-                <p>Pubg  Rank #1</p>
-                <h3>Twisted Minds </h3>
-            </div>
+      <h2>🔥 Top eSports Teams</h2>
+      <div class="team-list">
+        <!-- Team 1 -->
+        <div class="team-card">
+          <img src="assets/logos/team1.jpg" alt="Team 1">
+          <p>Free Fire Rank #1</p>
+          <h3>Team Falcons</h3>
         </div>
-    </section>
-    <!-- Review Form -->
-<section id="reviewSection" style="text-align: center; padding: 20px;">
-    <h1 style="color: cyan;">💬 Leave a Review</h1>
-    <form id="reviewForm" style="margin-top: 20px;">
-      <input type="text" id="username" placeholder="Your Name" required style="padding: 10px; margin: 5px;"><br>
-      <textarea id="message" placeholder="Your Review" required style="padding: 10px; margin: 5px;"></textarea><br>
-  
-      <!-- Star Rating -->
-      <div id="starRating" style="font-size: 30px; margin: 10px 0;">
-        <span data-star="1">★</span>
-        <span data-star="2">★</span>
-        <span data-star="3">★</span>
-        <span data-star="4">★</span>
-        <span data-star="5">★</span>
+        <!-- Team 2 -->
+        <div class="team-card">
+          <img src="assets/logos/team2.png" width="870" alt="Team 2">
+          <p>Pubg Rank #1</p>
+          <h3>Twisted Minds</h3>
+        </div>
       </div>
-      <input type="hidden" id="rating" value="0">
-  
-      <button type="submit" style="padding: 10px 20px; background-color: #00ffff; border: none; border-radius: 10px; font-weight: bold;">Submit</button>
-    </form>
-    <p id="responseMsg" style="color: lightgreen;"></p>
-  </section>
-  
-  <!-- Reviews Container -->
-  <section style="padding: 20px;">
-    <h2 style="text-align: center; color: cyan;">📝 User Reviews</h2>
-    <div id="reviewsContainer" style="margin-top: 20px;"></div>
-  </section>
-  
+    </section>
 
-  
-</main>
-   
+    <!-- Review Form Section -->
+    <section id="reviewSection" style="text-align: center; padding: 20px;">
+      <h1 style="color: cyan;">💬 Leave a Review</h1>
+      <form id="reviewForm" style="margin-top: 20px;">
+        <input type="text" id="username" placeholder="Your Name" required style="padding: 10px; margin: 5px;"><br>
+        <textarea id="message" placeholder="Your Review" required style="padding: 10px; margin: 5px;"></textarea><br>
+        <!-- Star Rating -->
+        <div id="starRating" style="font-size: 30px; margin: 10px 0;">
+          <span data-star="1">★</span>
+          <span data-star="2">★</span>
+          <span data-star="3">★</span>
+          <span data-star="4">★</span>
+          <span data-star="5">★</span>
+        </div>
+        <input type="hidden" id="rating" value="0">
+        <button type="submit" style="padding: 10px 20px; background-color: #00ffff; border: none; border-radius: 10px; font-weight: bold;">Submit</button>
+      </form>
+      <p id="responseMsg" style="color: lightgreen;"></p>
+    </section>
 
+    <!-- Reviews Container -->
+    <section style="padding: 20px;">
+      <h2 style="text-align: center; color: cyan;">📝 User Reviews</h2>
+      <div id="reviewsContainer" style="margin-top: 20px;"></div>
+    </section>
+  </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 JA eSports. Enter the Future of Competitive Gaming.</p>
-    </footer>
-    <script>
-        const stars = document.querySelectorAll("#starRating span");
-        const ratingInput = document.getElementById("rating");
-      
-        let selectedRating = 0;
-      
-        stars.forEach((star, i) => {
-          star.style.cursor = "pointer";
-      
-          star.addEventListener("mouseover", () => {
-            highlightStars(i + 1);
-          });
-      
-          star.addEventListener("mouseout", () => {
-            highlightStars(selectedRating);
-          });
-      
-          star.addEventListener("click", () => {
-            selectedRating = i + 1;
-            ratingInput.value = selectedRating;
+  <!-- Footer Section -->
+
+        <!-- Footer Section -->
+        <footer>
+          <div class="footer-container">
+              <div class="footer-logo">
+                  <h2>⚡ JA eSports</h2>
+                  <p>Enter the Future of Competitive Gaming</p>
+              </div>
+              
+              <div class="footer-links">
+                  <div class="footer-column">
+                      <h3>Company</h3>
+                      <ul>
+                          <li><a href="#">Home</a></li>
+                          <li><a href="content/AboutUs.html">About Us</a></li>
+                          <li><a href="content/teams.html">Teams</a></li>
+                      </ul>
+                  </div>
+                  
+                  <div class="footer-column">
+                      <h3>Legal</h3>
+                      <ul>
+                          <li><a href="Extra/terms.html">Terms of Service</a></li>
+                          <li><a href="Extra/privacy.html">Privacy Policy</a></li>
+                          <li><a href="Extra/cookies.html">Cookie Policy</a></li>
+                      </ul>
+                  </div>
+                  
+                  <div class="footer-column">
+                      <h3>Support</h3>
+                      <ul>
+                          <li><a href="Extra/contact.html">Contact Us</a></li>
+                          <li><a href="Extra/faq.html">FAQ</a></li>
+                          <li><a href="Extra/help-center.html">Help Center</a></li>
+                      </ul>
+                  </div>
+                  
+                  <div class="footer-column">
+                      <h3>Connect With Us</h3>
+                      <div class="social-links">
+                          <a href="https://www.facebook.com/jaesports.humber/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                          <a href="https://x.com/jaesportshumber" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                          <a href="https://www.instagram.com/jaesports.humber/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                          <a href="https://discord.com/channels/1359647793500651560/1359647794255630438" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                          <a href="https://youtube.com/@jaesports.humber?si=22imXhvvv0p6TUbF" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                      </div>
+                      <div class="email-link">
+                          <a href="mailto:jaesports.humber@gmail.com">
+                              <i class="fas fa-envelope"></i>jaesports.humber@gmail.com
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="footer-bottom">
+                  <p>&copy; 2025 JA eSports. All rights reserved.</p>
+                  <p>Made with <i class="fas fa-heart"></i> by the JA eSports team</p>
+              </div>
+          </div>
+      </footer>
+  <!-- JavaScript -->
+  <script>
+    // Star rating functionality
+    const stars = document.querySelectorAll("#starRating span");
+    const ratingInput = document.getElementById("rating");
+    let selectedRating = 0;
+
+    stars.forEach((star, index) => {
+      star.addEventListener("click", () => {
+        selectedRating = index + 1;
+        ratingInput.value = selectedRating;
+        highlightStars(selectedRating);
+      });
+    });
+
+    function highlightStars(count) {
+      stars.forEach((star, index) => {
+        star.style.color = index < count ? "gold" : "gray";
+      });
+    }
+
+    // Review form submission
+    document.getElementById("reviewForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const submitBtn = this.querySelector("button[type='submit']");
+      const originalBtnText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+
+      try {
+        const response = await fetch("/api/reviews", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            username: document.getElementById("username").value,
+            message: document.getElementById("message").value,
+            rating: selectedRating
+          })
+        });
+
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || "Failed to submit review");
+
+        document.getElementById("responseMsg").textContent = result.message;
+        document.getElementById("responseMsg").style.color = "lightgreen";
+
+        // Reset form
+        this.reset();
+        selectedRating = 0;
+        highlightStars(0);
+
+        // Reload reviews
+        await loadReviews();
+      } catch (error) {
+        document.getElementById("responseMsg").textContent = error.message;
+        document.getElementById("responseMsg").style.color = "red";
+        console.error("Review submission error:", error);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+      }
+    });
+
+    // Load and display reviews
+    async function loadReviews() {
+      const container = document.getElementById("reviewsContainer");
+      container.innerHTML = '<div class="loading">Loading reviews...</div>';
+
+      try {
+        const response = await fetch("/api/reviews");
+        if (!response.ok) throw new Error("Failed to fetch reviews");
+
+        const reviews = await response.json();
+        if (!Array.isArray(reviews)) throw new Error("Invalid reviews data");
+
+        if (reviews.length === 0) {
+          container.innerHTML = '<p class="no-reviews">No reviews yet. Be the first!</p>';
+          return;
+        }
+
+        container.innerHTML = reviews.map(review => `
+          <div class="review-card">
+            <div class="review-header">
+              <h4>${review.username || "Anonymous"}</h4>
+              <div class="review-rating">
+                ${"★".repeat(review.rating || 0)}${"☆".repeat(5 - (review.rating || 0))}
+              </div>
+            </div>
+            <p class="review-message">${review.message}</p>
+            <div class="review-footer">
+              <small>${new Date(review.date).toLocaleString()}</small>
+              <button class="delete-btn" data-id="${review.date}">Delete</button>
+            </div>
+          </div>
+        `).join("");
+
+        // Add delete button handlers
+        document.querySelectorAll(".delete-btn").forEach(btn => {
+          btn.addEventListener("click", async () => {
+            if (confirm("Are you sure you want to delete this review?")) {
+              try {
+                const response = await fetch(`/api/reviews/${btn.dataset.id}`, {
+                  method: "DELETE"
+                });
+                if (!response.ok) throw new Error("Failed to delete review");
+                await loadReviews();
+              } catch (error) {
+                console.error("Delete error:", error);
+                alert("Failed to delete review");
+              }
+            }
           });
         });
-      
-        function highlightStars(rating) {
-          stars.forEach((s, i) => {
-            s.style.color = i < rating ? "gold" : "gray";
-          });
-        }
-      
-        // Handle submit
-        document.getElementById("reviewForm").addEventListener("submit", async function (e) {
-          e.preventDefault();
-          const username = document.getElementById("username").value;
-          const message = document.getElementById("message").value;
-          const rating = parseInt(document.getElementById("rating").value) || 0;
-      
-          const res = await fetch("/api/reviews", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ username, message, rating }),
-          });
-      
-          const data = await res.json();
-          document.getElementById("responseMsg").innerText = data.message;
-      
-          document.getElementById("username").value = "";
-          document.getElementById("message").value = "";
-          document.getElementById("rating").value = "0";
-          selectedRating = 0;
-          highlightStars(0);
-      
-          loadReviews();
-        });
-      
-        // Load reviews
-        async function loadReviews() {
-          const res = await fetch("/api/reviews");
-          const reviews = await res.json();
-          const container = document.getElementById("reviewsContainer");
-          container.innerHTML = "";
-      
-          if (reviews.length === 0) {
-            container.innerHTML = "<p style='text-align:center; color: white;'>No reviews yet. Be the first!</p>";
-            return;
-          }
-      
-          reviews.reverse().forEach((rev, index) => {
-            const div = document.createElement("div");
-            div.className = "review-card";
-            div.style = `
-              background-color: #111;
-              border: 1px solid cyan;
-              border-radius: 10px;
-              padding: 10px;
-              margin: 15px auto;
-              max-width: 600px;
-              color: white;
-              position: relative;
-            `;
-      
-            const stars = "★".repeat(rev.rating || 0) + "☆".repeat(5 - (rev.rating || 0));
-      
-            div.innerHTML = `
-              <strong>${rev.username}</strong><br>
-              <em>${new Date(rev.date).toLocaleString()}</em><br>
-              <div style="color: gold; font-size: 20px;">${stars}</div>
-              <p>${rev.message}</p>
-              <button onclick="editReview(${index})" style="margin-right: 10px;">✏️ Edit</button>
-              <button onclick="deleteReview(${index})">🗑️ Delete</button>
-            `;
-            container.appendChild(div);
-          });
-        }
-      
-        // Edit review
-        function editReview(index) {
-          fetch("/api/reviews")
-            .then(res => res.json())
-            .then(data => {
-              const rev = data[data.length - 1 - index]; // reversed
-              document.getElementById("username").value = rev.username;
-              document.getElementById("message").value = rev.message;
-              selectedRating = rev.rating;
-              ratingInput.value = rev.rating;
-              highlightStars(rev.rating);
-              deleteReview(index); // Remove and re-add
-            });
-        }
-      
-        // Delete review
-        async function deleteReview(index) {
-          await fetch(`/api/reviews/delete/${index}`, { method: "DELETE" });
-          loadReviews();
-        }
-      
-        loadReviews();
-      </script>
-      
-    
+      } catch (error) {
+        console.error("Error loading reviews:", error);
+        container.innerHTML = `
+          <div class="error">
+            <p>Error loading reviews</p>
+            <small>${error.message}</small>
+            <button onclick="loadReviews()">Retry</button>
+          </div>
+        `;
+      }
+    }
 
-</body>
+    // Initial load
+    document.addEventListener("DOMContentLoaded", () => {
+      loadReviews();
+
+      // Add Font Awesome if not already loaded
+      if (!document.querySelector(".fa-spinner")) {
+        const faScript = document.createElement("script");
+        faScript.src = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js";
+        document.head.appendChild(faScript);
+      }
+    });
+  </script>
+
+  </body>
 </html>
-

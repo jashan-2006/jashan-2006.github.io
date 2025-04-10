@@ -1,43 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
-    <meta name="author" content="Arshdeep Singh">
+    <title>Help Center - JA eSports</title>
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="../styles/normalize.css">
-    <link rel="stylesheet" href="../styles/register.css">
+    <link rel="stylesheet" href="../styles/support.css">
     <link rel="stylesheet" href="../styles/fontstyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" type="image/png" href="../assets/icons/favicon.ico">
-    <script src="../scripts/register.js"></script>
-</head>
 <body>
     <header>
         <div class="logo"><a href="../index.html" class="no-effects">⚡ JA eSports</a></div>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="#">Register</a></li>
-                <li><a href="teams.html">Teams</a></li>
-                <li><a href="livestreams.html">Live Streams</a></li>
-                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="../content/register.html">Register</a></li>
+                <li><a href="../content/teams.html">Teams</a></li>
+                <li><a href="../content/livestreams.html">Live Streams</a></li>
+                <li><a href="../content/AboutUs.html">About Us</a></li>
             </ul>
         </nav>
     </header>
-        <!-- Search Bar -->
-        <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Search for games...">
-            <button id="search-button">Search</button>
-        </div>
-    <section class="games-section">
-        <h1>🔥 Register for Esports Games 🔥</h1>
-        <div id="games-container" class="games-grid">
-            <!-- Game cards will be dynamically inserted here by JavaScript -->
-        </div>
-        <div id="loading-spinner" class="loading-spinner"></div> 
-    </section>
 
+    <main class="support-container">
+        <h1>Help Center</h1>
+        
+        <div class="help-search">
+            <input type="text" placeholder="Search help articles...">
+            <button><i class="fas fa-search"></i> Search</button>
+        </div>
+
+        <div class="help-categories">
+            <div class="help-category">
+                <div class="category-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h2>Tournaments</h2>
+                <ul>
+                    <li><a href="#">How to register</a></li>
+                    <li><a href="#">Tournament rules</a></li>
+                    <li><a href="#">Prize distribution</a></li>
+                    <li><a href="#">Schedule conflicts</a></li>
+                </ul>
+            </div>
+
+            <div class="help-category">
+                <div class="category-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h2>Account</h2>
+                <ul>
+                    <li><a href="#">Password recovery</a></li>
+                    <li><a href="#">Profile settings</a></li>
+                    <li><a href="#">Two-factor authentication</a></li>
+                    <li><a href="#">Closing account</a></li>
+                </ul>
+            </div>
+
+            <div class="help-category">
+                <div class="category-icon">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <h2>Technical</h2>
+                <ul>
+                    <li><a href="#">Stream troubleshooting</a></li>
+                    <li><a href="#">System requirements</a></li>
+                    <li><a href="#">Browser compatibility</a></li>
+                    <li><a href="#">Report a bug</a></li>
+                </ul>
+            </div>
+
+            <div class="help-category">
+                <div class="category-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h2>Community</h2>
+                <ul>
+                    <li><a href="#">Team management</a></li>
+                    <li><a href="#">Code of conduct</a></li>
+                    <li><a href="#">Reporting players</a></li>
+                    <li><a href="#">Sponsorship</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="help-popular">
+            <h2>Popular Articles</h2>
+            <div class="popular-grid">
+                <a href="#" class="popular-card">
+                    <h3>How to Prepare for Your First Tournament</h3>
+                    <p>Complete guide to tournament readiness</p>
+                </a>
+                <a href="#" class="popular-card">
+                    <h3>Optimizing Stream Quality</h3>
+                    <p>Settings for the best viewing experience</p>
+                </a>
+                <a href="#" class="popular-card">
+                    <h3>Team Registration Process</h3>
+                    <p>Step-by-step team creation</p>
+                </a>
+            </div>
+        </div>
+    </main>
         <!-- Footer Section -->
         <footer>
             <div class="footer-container">
@@ -97,7 +163,5 @@
                 </div>
             </div>
         </footer>
-    
-    
-</body>   
+</body>
 </html>
