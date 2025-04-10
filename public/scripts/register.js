@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.warn(`No results found for game: ${gameName}`);
                 return null;
             }
-            return data.results[0]; // Return the first result
+            return data.results[0]; 
         } catch (error) {
             console.error(`Error fetching ${gameName} details:`, error);
             return null;
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to display games
     function displayGames(games) {
-        gamesContainer.innerHTML = ""; // Clear the container before displaying new games
+        gamesContainer.innerHTML = ""; 
 
         if (games.length === 0) {
             gamesContainer.innerHTML = "<p>No games found.</p>";
@@ -120,10 +120,10 @@ document.addEventListener("DOMContentLoaded", function () {
     async function performSearch() {
         const searchTerm = searchInput.value.trim();
         if (searchTerm) {
-            loadingSpinner.style.display = "block"; // Show spinner
+            loadingSpinner.style.display = "block"; 
             const searchResults = await fetchSearchResults(searchTerm);
             displayGames(searchResults);
-            loadingSpinner.style.display = "none"; // Hide spinner
+            loadingSpinner.style.display = "none"; 
         } else {
             // If the search term is empty, reload the initial games
             fetchInitialGames();
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to fetch initial games (Battlefy games)
     async function fetchInitialGames() {
         try {
-            loadingSpinner.style.display = "block"; // Show spinner
+            loadingSpinner.style.display = "block"; 
             // Fetch details for games available on Battlefy
             const games = [];
             for (const gameName of battlefyGames) {
@@ -145,10 +145,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Display the games (limit to 36)
             displayGames(games.slice(0, 36));
-            loadingSpinner.style.display = "none"; // Hide spinner
+            loadingSpinner.style.display = "none";
         } catch (error) {
             console.error("Error fetching initial games:", error);
-            loadingSpinner.style.display = "none"; // Hide spinner
+            loadingSpinner.style.display = "none"; 
         }
     }
 

@@ -1,21 +1,22 @@
+/* General Reset and Box Sizing */
 html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
-html,body{
+
+html, body {
     height: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
 }
-main{
+
+main {
     flex: 1;
 }
 
-
-/* Background */
+/* Background Styling */
 body {
     background-image: url('../assets/backgroundImages/BackGround.jpg');
     background-size: cover; 
@@ -25,11 +26,11 @@ body {
     color: white;
 }
 
-/* Header */
+/* Header Styling */
 header {
     display: flex;
     align-items: center;
-    padding: 0% ;
+    padding: 0%;
     background: rgb(20, 20, 20);
     box-shadow: 0 0 10px cyan;
     position: fixed;
@@ -44,6 +45,8 @@ header {
     color: cyan;
     align-items: center;
 }
+
+/* Link Reset Styles */
 a.no-effects, 
 a.no-effects:hover, 
 a.no-effects:active, 
@@ -60,12 +63,13 @@ a.no-effects:focus {
     display: inline !important;
 }
 
+/* Navigation Menu */
 nav ul {
     display: flex;
     list-style: none;
     margin-left: 25%;   
     justify-items: end;
-    padding-right: 0% ;
+    padding-right: 0%;
 }
 
 nav ul li {
@@ -82,8 +86,10 @@ nav ul li a {
     color: black;
     align-items: center;
 }
-a{
- text-decoration: none;
+
+/* General Link Styling */
+a {
+    text-decoration: none;
     display: flex;
     justify-content: space-around;
     gap: 25%;
@@ -96,20 +102,23 @@ a{
     border-radius: 20px;
     box-shadow: 0 0 10px cyan;
     transition: all 0.3s ease-in-out;
-    
 }
-a:hover{
+
+a:hover {
     box-shadow: 0 0 25px magenta;
     background: magenta;
 }
+
+/* About Us Section */
 .about-content {
     padding: 100px 10% 50px;
     max-width: 1200px;
     margin: 0 auto;
+    font-size: x-large;
 }
 
 .about-content h1 {
-    font-size: 3rem;
+    font-size: xx-large;
     color: cyan;
     text-align: center;
     margin-bottom: 40px;
@@ -126,7 +135,7 @@ a:hover{
 
 .about-section h2 {
     color: cyan;
-    font-size: 1.8rem;
+    font-size: xx-large;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -134,7 +143,7 @@ a:hover{
 .about-section p {
     line-height: 1.6;
     margin-bottom: 15px;
-    font-size: 1.1rem;
+    font-size: x-large;
 }
 
 .about-section ul {
@@ -146,6 +155,7 @@ a:hover{
     line-height: 1.5;
 }
 
+/* Team Section */
 .team-section {
     margin-top: 50px;
 }
@@ -182,109 +192,6 @@ a:hover{
     margin-bottom: 10px;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 0px;
-    background: rgba(20, 20, 20, 0.8);
-    color: cyan;
-    box-shadow: 0 0 10px cyan;
-    margin-top: 0px;
-}
-/* Media Queries for Responsiveness */
-
-/* For tablets */
- @media (max-width: 912px) {
-    /* Header */
-    header {
-        width: 100%;
-        height: auto;
-    }
-   
-    .logo {
-        font-size: 24px;
-        padding: 0%;
-        margin: 0%;
-    }
-    nav ul{
-        padding: 0px;
-        padding-left:0%;
-        margin: 0px;
-    }
-    nav ul li a {
-        width:80px;
-        height: auto;
-        font-size: 12px;
-        padding: 0px 0px;
-        margin: 0px;
-       
-    }
-    footer{
-        width: 100%;
-        height: auto;
-    }
-}
-/* For phones */
-@media (max-width: 475px) {
-    /* Header */
-    header {
-        width: 100%;
-        height: fit-content;
-    }
-    .logo {
-        font-size: 80%;
-        padding: 0%;
-        margin: 0%;
-        
-    }
-    nav ul {
-       padding: 0px;
-       padding-left: 27%;
-       margin: 0px;
-    }
-    nav ul li {
-        padding: 2%;
-        margin: 0px;
-    }
-    nav ul li a {
-        width: 40px;
-        height: auto;
-        font-size: 6px;
-        
-    }
-    
-    /* Footer */
-    footer {
-        font-size: xx-small;
-        width: 100%;
-        height: auto;
-        justify-items: center;
-    }
-}
-/* For medium screens like MacBook Air */
-@media (min-width: 913px) and (max-width: 1460px) {
-    header {
-        height: fit-content;
-    }
-    
-    .logo {
-        padding-right: 10%;
-        font-size: 120%;
-    }
-    
-    nav ul {
-        margin-left: 15%;
-        gap: 5%;
-    }
-    
-    nav ul li a {
-        width: 120px;
-        font-size: 14px;
-    }
-}
-/* ... (keep all your existing styles above this) ... */
-
-/* Team Section Updates */
 .team-member img {
     width: 150px;
     height: 150px;
@@ -295,9 +202,19 @@ footer {
 }
 
 .team-member .bio {
-    font-size: 0.9rem;
+    font-size: x-large;
     color: #ccc;
     margin-top: 10px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 0px;
+    background: rgba(20, 20, 20, 0.8);
+    color: cyan;
+    box-shadow: 0 0 10px cyan;
+    margin-top: 0px;
 }
 
 /* Professional Footer Styles */
@@ -442,5 +359,89 @@ footer {
 @media (max-width: 480px) {
     .footer-column {
         width: 100%;
+    }
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets */
+@media (max-width: 912px) {
+    header {
+        width: 100%;
+        height: auto;
+    }
+   
+    .logo {
+        font-size: 24px;
+        padding: 0%;
+        margin: 0%;
+    }
+    nav ul {
+        padding: 0px;
+        padding-left: 0%;
+        margin: 0px;
+    }
+    nav ul li a {
+        width: 80px;
+        height: auto;
+        font-size: 12px;
+        padding: 0px 0px;
+        margin: 0px;
+    }
+    footer {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* For phones */
+@media (max-width: 475px) {
+    header {
+        width: 100%;
+        height: fit-content;
+    }
+    .logo {
+        font-size: 80%;
+        padding: 0%;
+        margin: 0%;
+    }
+    nav ul {
+        padding: 0px;
+        padding-left: 27%;
+        margin: 0px;
+    }
+    nav ul li {
+        padding: 2%;
+        margin: 0px;
+    }
+    nav ul li a {
+        width: 40px;
+        height: auto;
+        font-size: 6px;
+    }
+    footer {
+        font-size: xx-small;
+        width: 100%;
+        height: auto;
+        justify-items: center;
+    }
+}
+
+/* For medium screens like MacBook Air */
+@media (min-width: 913px) and (max-width: 1460px) {
+    header {
+        height: fit-content;
+    }
+    .logo {
+        padding-right: 10%;
+        font-size: 120%;
+    }
+    nav ul {
+        margin-left: 15%;
+        gap: 5%;
+    }
+    nav ul li a {
+        width: 120px;
+        font-size: 14px;
     }
 }

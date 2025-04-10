@@ -1,17 +1,18 @@
+/* Global Styles */
 html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
-html,body{
+
+html, body {
     height: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
 }
 
-main{
+main {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -19,21 +20,21 @@ main{
     align-items: center; /* Center the loading spinner horizontally */
 }
 
-
-/* Background */
+/* Body Background */
 body {
     background-image: url('../assets/backgroundImages/BackGround.jpg');
-    background-size: cover; 
-    background-repeat: no-repeat; 
+    background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    color: white;  
+    color: white;
 }
-/* Header */
+
+/* Header Styles */
 header {
     display: flex;
     align-items: center;
-    padding: 0% ;
+    padding: 0%;
     background: rgb(20, 20, 20);
     box-shadow: 0 0 10px cyan;
     position: fixed;
@@ -48,6 +49,8 @@ header {
     color: cyan;
     align-items: center;
 }
+
+/* Link Reset Styles */
 a.no-effects, 
 a.no-effects:hover, 
 a.no-effects:active, 
@@ -64,12 +67,13 @@ a.no-effects:focus {
     display: inline !important;
 }
 
+/* Navigation Styles */
 nav ul {
     display: flex;
     list-style: none;
-    margin-left: 25%;   
+    margin-left: 25%;
     justify-items: end;
-    padding-right: 0% ;
+    padding-right: 0%;
 }
 
 nav ul li {
@@ -86,13 +90,15 @@ nav ul li a {
     color: black;
     align-items: center;
 }
-a{
- text-decoration: none;
+
+/* General Link Styles */
+a {
+    text-decoration: none;
     display: flex;
     justify-content: space-around;
     gap: 25%;
     padding: 2%;
-    margin-top: auto; 
+    margin-top: auto;
     background: cyan;
     width: 150px;
     height: auto;
@@ -100,12 +106,14 @@ a{
     border-radius: 20px;
     box-shadow: 0 0 10px cyan;
     transition: all 0.3s ease-in-out;
-    
 }
-a:hover{
+
+a:hover {
     box-shadow: 0 0 25px magenta;
     background: magenta;
 }
+
+/* Search Bar Styles */
 .search-bar {
     text-align: center;
     margin: 20px 0;
@@ -134,7 +142,8 @@ a:hover{
 .search-bar button:hover {
     background-color: magenta;
 }
-/* Loading Spinner */
+
+/* Loading Spinner Styles */
 .loading-spinner {
     border: 8px solid #f3f3f3; /* Light grey */
     border-top: 8px solid cyan; /* Blue */
@@ -150,6 +159,8 @@ a:hover{
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+/* Game Card Styles */
 .game-card {
     background-color: #333;
     border-radius: 10px;
@@ -162,18 +173,22 @@ a:hover{
     justify-content: space-between;
     height: 100%;
 }
+
 .game-card img {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
 }
+
 .game-card h2 {
     margin: 10px 0;
     font-size: 20px;
 }
+
 .game-card p {
     margin: 10px 0;
 }
+
 .game-card .register-button {
     margin-top: auto; /* Push the button to the bottom */
     padding: 10px 20px;
@@ -186,16 +201,15 @@ a:hover{
     transition: background-color 0.3s ease;
 }
 
-
 .game-card .register-button:hover {
     background-color: magenta;
 }
-
 
 .games-section {
     padding: 20px;
     text-align: center;
 }
+
 .games-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -203,7 +217,6 @@ a:hover{
     padding: 20px;
     margin-bottom: 10%;
 }
-
 
 .game-card:hover {
     transform: scale(1.05);
@@ -226,7 +239,7 @@ a:hover{
     background-color: magenta;
 }
 
-/* Professional Footer Styles */
+/* Footer Styles */
 footer {
     box-shadow: cyan 0px 0px 10px;
     background-color: #000;
@@ -238,14 +251,14 @@ footer {
 .footer-container {
     max-width: 1200px;
     width: 100%;
-    margin: 0 ;
-    padding: 0 ;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-self: center;
 }
 
-.footer-logo h2{
+.footer-logo h2 {
     color: cyan;
     font-size: 1.5rem;
     margin-bottom: 10px;
@@ -270,7 +283,7 @@ footer {
     width: 23%;
 }
 
-.footer-column h3{
+.footer-column h3 {
     color: cyan;
     margin-bottom: 20px;
     font-size: 1.1rem;
@@ -356,7 +369,10 @@ footer {
 .footer-bottom i.fa-heart {
     color: #ff0000;
 }
+
 /* Responsive Design */
+
+/* For tablets and smaller screens */
 @media (max-width: 768px) {
     .policy-container {
         margin-top: 80px;
@@ -366,34 +382,39 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-/* Media Queries for Responsiveness */
+
+/* For medium screens */
 @media (max-width: 912px) {
     header {
         width: 100%;
         height: fit-content;
     }
+
     .logo {
         font-size: 24px;
         padding: 0%;
         margin: 0%;
     }
-    nav ul{
+
+    nav ul {
         padding: 0px;
-        padding-left:0%;
+        padding-left: 0%;
         margin: 0px;
     }
+
     nav ul li a {
-        width:80px;
+        width: 80px;
         height: auto;
         font-size: 12px;
         padding: 0px 0px;
         margin: 0px;
-       
     }
+
     .search-bar {
         padding-top: 5%;
     }
-    .btn-glow2{
+
+    .btn-glow2 {
         width: auto;
         height: auto;
     }
@@ -403,86 +424,91 @@ footer {
         padding: 50px;
     }
 }
+
 /* For phones */
 @media (max-width: 475px) {
-    /* Header */
     header {
         width: 100%;
         height: fit-content;
     }
+
     body {
         background-attachment: fixed; /* Fix for mobile performance */
     }
-    main{
+
+    main {
         flex: 1;
     }
+
     .logo {
         font-size: 80%;
         padding: 0%;
         margin: 0%;
-        
     }
+
     nav ul {
-       padding: 0px;
-       padding-left: 25%;
-       margin: 0px;
+        padding: 0px;
+        padding-left: 25%;
+        margin: 0px;
     }
+
     nav ul li {
         padding: 2%;
         margin: 0px;
     }
+
     nav ul li a {
         width: 40px;
         height: auto;
         font-size: 6px;
-        
     }
+
     .search-bar {
         padding: 2%;
     }
-    .btn-glow2{
+
+    .btn-glow2 {
         font-size: 6px;
         padding: 0px;
         margin: 0px;
         width: auto;
         height: auto;
     }
-    .games-section h1{
 
+    .games-section h1 {
         font-size: 20px;
     }
-    
+
     .nomore {
         font-size: 24px;
         padding: 50px;
     }
-        /* Footer */
-        footer {
-            
-            font-size: xx-small;
-            width: 100%;
-            height: fit-content;
-            justify-items: center;
-            margin-top: auto;
-        }
+
+    footer {
+        font-size: xx-small;
+        width: 100%;
+        height: fit-content;
+        justify-items: center;
+        margin-top: auto;
     }
-    
+}
+
 /* For medium screens like MacBook Air */
 @media (min-width: 913px) and (max-width: 1460px) {
     header {
         height: fit-content;
     }
-    
+
     .logo {
         padding-right: 10%;
         font-size: 120%;
     }
-    
+
     nav ul {
         margin-left: 15%;
         gap: 5%;
     }
-    
+
     nav ul li a {
         width: 120px;
         font-size: 14px;

@@ -1,33 +1,33 @@
+/* General Reset and Box Sizing */
 html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
-html,body{
+
+html, body {
     height: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
 }
-main{
+
+main {
     flex: 1;
 }
 
-
-/* Background */
+/* Background Styling */
 body {
     background: url('../assets/backgroundImages/BackGround.jpg') no-repeat center center fixed;
     background-size: cover;
-    
     color: white;
 }
 
-/* Header */
+/* Header Section */
 header {
     display: flex;
     align-items: center;
-    padding: 0% ;
+    padding: 0%;
     background: rgb(20, 20, 20);
     box-shadow: 0 0 10px cyan;
     position: fixed;
@@ -42,6 +42,8 @@ header {
     color: cyan;
     align-items: center;
 }
+
+/* Link Styling */
 a.no-effects, 
 a.no-effects:hover, 
 a.no-effects:active, 
@@ -58,12 +60,13 @@ a.no-effects:focus {
     display: inline !important;
 }
 
+/* Navigation Menu */
 nav ul {
     display: flex;
     list-style: none;
     margin-left: 25%;   
     justify-items: end;
-    padding-right: 0% ;
+    padding-right: 0%;
 }
 
 nav ul li {
@@ -80,8 +83,9 @@ nav ul li a {
     color: black;
     align-items: center;
 }
-a{
- text-decoration: none;
+
+a {
+    text-decoration: none;
     display: flex;
     justify-content: space-around;
     gap: 25%;
@@ -94,12 +98,13 @@ a{
     border-radius: 20px;
     box-shadow: 0 0 10px cyan;
     transition: all 0.3s ease-in-out;
-    
 }
-a:hover{
+
+a:hover {
     box-shadow: 0 0 25px magenta;
     background: magenta;
 }
+
 /* Video Section */
 .video-section {
     padding-top: 10%;
@@ -112,19 +117,12 @@ a:hover{
     margin-bottom: 20px;
 }
 
-.video-container1 {
+.video-container1, .video-container2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     padding: 20px;
-}
-.video-container2{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;    
 }
 
 .video-item {
@@ -151,11 +149,13 @@ a:hover{
     width: 100%;
     height: 315px;
 }
+
 /* See More Link */
 a {
     justify-self: center;
     margin-top: 4%;
 }
+
 .see-more {
     display: block;
     margin-top: 10px;
@@ -176,7 +176,7 @@ a {
     color: white;
 }
 
-/* Professional Footer Styles */
+/* Footer Section */
 footer {
     box-shadow: cyan 0px 0px 10px;
     background-color: #000;
@@ -188,14 +188,14 @@ footer {
 .footer-container {
     max-width: 1200px;
     width: 100%;
-    margin: 0 ;
-    padding: 0 ;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-self: center;
 }
 
-.footer-logo h2{
+.footer-logo h2 {
     color: cyan;
     font-size: 1.5rem;
     margin-bottom: 10px;
@@ -220,7 +220,7 @@ footer {
     width: 23%;
 }
 
-.footer-column h3{
+.footer-column h3 {
     color: cyan;
     margin-bottom: 20px;
     font-size: 1.1rem;
@@ -306,45 +306,36 @@ footer {
 .footer-bottom i.fa-heart {
     color: #ff0000;
 }
+
 /* Responsive Design */
-@media (max-width: 768px) {
-    .policy-container {
-        margin-top: 80px;
-    }
-    
-    .cookie-types {
-        grid-template-columns: 1fr;
-    }
-}
-/* Media Queries for Responsiveness */
 
 /* For tablets */
- @media (max-width: 912px) {
-    /* Header */
+@media (max-width: 912px) {
     header {
         width: 100%;
         height: auto;
     }
-   
+
     .logo {
         font-size: 24px;
         padding: 0%;
         margin: 0%;
     }
-    nav ul{
+
+    nav ul {
         padding: 0px;
-        padding-left:0%;
+        padding-left: 0%;
         margin: 0px;
     }
+
     nav ul li a {
-        width:80px;
+        width: 80px;
         height: auto;
         font-size: 12px;
         padding: 0px 0px;
         margin: 0px;
-       
     }
-    /* Video Section */
+
     .video-section {
         padding-top: 15%;
     }
@@ -356,79 +347,80 @@ footer {
         margin: 0%;
     }
 
-    .video-item iframe{
+    .video-item iframe {
         height: auto;
         margin: 0%;
-    } 
-    footer{
+    }
+
+    footer {
         width: 100%;
         height: auto;
     }
 }
+
 /* For phones */
 @media (max-width: 475px) {
-    /* Header */
     header {
         width: 100%;
         height: fit-content;
     }
+
     .logo {
         font-size: 80%;
         padding: 0%;
         margin: 0%;
-        
     }
+
     nav ul {
-       padding: 0px;
-       padding-left: 27%;
-       margin: 0px;
+        padding: 0px;
+        padding-left: 27%;
+        margin: 0px;
     }
+
     nav ul li {
         padding: 2%;
         margin: 0px;
     }
+
     nav ul li a {
         width: 40px;
         height: auto;
         font-size: 6px;
-        
     }
-    /* Video Section */
+
     .video-section {
         padding-top: 20%;
     }
+
     .video-item {
         width: 90%;
         height: fit-content;
-    
     }
 
-    
-    /* Footer */
     footer {
         font-size: xx-small;
         width: 100%;
         height: auto;
         justify-items: center;
     }
-    
 }
+
 /* For medium screens like MacBook Air */
 @media (min-width: 913px) and (max-width: 1460px) {
     header {
         height: fit-content;
     }
-    
+
     .logo {
         padding-right: 10%;
         font-size: 120%;
     }
-    
+
     nav ul {
         margin-left: 15%;
         gap: 5%;
     }
-    
+
     nav ul li a {
         width: 120px;
         font-size: 14px;

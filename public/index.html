@@ -66,6 +66,7 @@
       cursor: pointer;
     }
 
+    /* Loading and Error Messages */
     .loading, .no-reviews {
       text-align: center;
       padding: 20px;
@@ -87,7 +88,6 @@
       cursor: pointer;
     }
   </style>
-
 </head>
 <body>
 
@@ -200,9 +200,6 @@
       <div id="reviewsContainer" style="margin-top: 20px;"></div>
     </section>
   </main>
-
-  <!-- Footer Section -->
-
         <!-- Footer Section -->
         <footer>
           <div class="footer-container">
@@ -235,7 +232,7 @@
                       <ul>
                           <li><a href="Extra/contact.html">Contact Us</a></li>
                           <li><a href="Extra/faq.html">FAQ</a></li>
-                          <li><a href="Extra/help-center.html">Help Center</a></li>
+                          <li><a href="Extra/contact.html">Help Center</a></li>
                       </ul>
                   </div>
                   
@@ -383,7 +380,7 @@
           <div class="error">
             <p>Error loading reviews</p>
             <small>${error.message}</small>
-            <button onclick="loadReviews()">Retry</button>
+            <button onclick="loadReviews()" style="color: black">Retry</button>
           </div>
         `;
       }
