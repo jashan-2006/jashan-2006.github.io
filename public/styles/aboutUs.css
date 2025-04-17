@@ -155,58 +155,6 @@ a:hover {
     line-height: 1.5;
 }
 
-/* Team Section */
-.team-section {
-    margin-top: 50px;
-}
-
-.team-section h2 {
-    text-align: center;
-    color: cyan;
-    font-size: 2.2rem;
-    margin-bottom: 40px;
-}
-
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.team-member {
-    background: rgba(20, 20, 20, 0.9);
-    padding: 25px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
-    transition: transform 0.3s ease;
-}
-
-.team-member:hover {
-    transform: translateY(-10px);
-}
-
-.team-member h3 {
-    color: cyan;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.team-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid cyan;
-    margin-bottom: 15px;
-}
-
-.team-member .bio {
-    font-size: x-large;
-    color: #ccc;
-    margin-top: 10px;
-}
-
 /* Footer Styling */
 footer {
     text-align: center;
