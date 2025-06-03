@@ -2,6 +2,13 @@ import Counter from '@/components/Counter'
 import ToggleMessage from '@/components/ToggleMessage'
 import styles from './page.module.css'
 
+/**
+ * Home component for the Advanced Front-End App.
+ * Renders the main page with a welcome message, assignment description,
+ * and feature components such as Counter and ToggleMessage.
+ *
+ * @returns {JSX.Element} The rendered home page component.
+ */
 export default function Home() {
   return (
     <div>

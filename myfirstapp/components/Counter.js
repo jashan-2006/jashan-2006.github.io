@@ -1,29 +1,38 @@
 'use client'
 
+// Import useState hook from React
 import { useState } from 'react'
 
+// Counter component with an optional initialValue prop
 export default function Counter({ initialValue = 0 }) {
+  // State for the current count
   const [count, setCount] = useState(initialValue);
+  // State to track if the limit is reached
   const [isLimitReached, setIsLimitReached] = useState(false);
 
+  // Function to increment the count
   const increment = () => {
     const newCount = count + 1;
     setCount(newCount);
+    // Set limit reached if count is 10 or more
     if (newCount >= 10) {
       setIsLimitReached(true);
     }
   };
 
+  // Function to decrement the count
   const decrement = () => {
     setCount(count - 1);
     setIsLimitReached(false);
   };
 
+  // Function to reset the count to initial value
   const reset = () => {
     setCount(initialValue);
     setIsLimitReached(false);
   };
 
+  // Render the counter UI
   return (
     <div style={{
       border: '1px solid #ddd',
@@ -32,6 +41,7 @@ export default function Counter({ initialValue = 0 }) {
       margin: '20px 0'
     }}>
       <h2 style={{ marginTop: 0 }}>Counter: {count}</h2>
+      {/* Increment button */}
       <button 
         onClick={increment}
         style={{
@@ -46,6 +56,7 @@ export default function Counter({ initialValue = 0 }) {
       >
         Increment
       </button>
+      {/* Decrement button */}
       <button 
         onClick={decrement}
         style={{
@@ -60,6 +71,7 @@ export default function Counter({ initialValue = 0 }) {
       >
         Decrement
       </button>
+      {/* Reset button */}
       <button 
         onClick={reset}
         style={{
@@ -74,6 +86,7 @@ export default function Counter({ initialValue = 0 }) {
         Reset
       </button>
       
+      {/* Show message if limit is reached */}
       {isLimitReached && (
         <p style={{ color: 'red', fontWeight: 'bold' }}>
           You&apos;ve reached the limit!

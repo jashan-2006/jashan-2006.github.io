@@ -1,3 +1,4 @@
+/* Page container styles and CSS variables */
 .page {
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
@@ -16,6 +17,7 @@
   font-family: var(--font-geist-sans);
 }
 
+/* Dark mode variable overrides */
 @media (prefers-color-scheme: dark) {
   .page {
     --gray-rgb: 255, 255, 255;
@@ -27,6 +29,7 @@
   }
 }
 
+/* Main content area */
 .main {
   display: flex;
   flex-direction: column;
@@ -34,6 +37,7 @@
   grid-row-start: 2;
 }
 
+/* Ordered list styles in main */
 .main ol {
   font-family: var(--font-geist-mono);
   padding-left: 0;
@@ -44,10 +48,12 @@
   list-style-position: inside;
 }
 
+/* List item spacing */
 .main li:not(:last-of-type) {
   margin-bottom: 8px;
 }
 
+/* Inline code styling */
 .main code {
   font-family: inherit;
   background: var(--gray-alpha-100);
@@ -56,11 +62,13 @@
   font-weight: 600;
 }
 
+/* Call-to-action button container */
 .ctas {
   display: flex;
   gap: 16px;
 }
 
+/* CTA button base styles */
 .ctas a {
   appearance: none;
   border-radius: 128px;
@@ -81,34 +89,39 @@
   font-weight: 500;
 }
 
+/* Primary CTA button */
 a.primary {
   background: var(--foreground);
   color: var(--background);
   gap: 8px;
 }
 
+/* Secondary CTA button */
 a.secondary {
   border-color: var(--gray-alpha-200);
   min-width: 158px;
 }
 
+/* Footer styles */
 .footer {
   grid-row-start: 3;
   display: flex;
   gap: 24px;
 }
 
+/* Footer link styles */
 .footer a {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
+/* Footer image styles */
 .footer img {
   flex-shrink: 0;
 }
 
-/* Enable hover only on non-touch devices */
+/* Hover effects for non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {
     background: var(--button-primary-hover);
@@ -126,6 +139,7 @@ a.secondary {
   }
 }
 
+/* Responsive styles for small screens */
 @media (max-width: 600px) {
   .page {
     padding: 32px;
@@ -161,16 +175,20 @@ a.secondary {
   }
 }
 
+/* Invert logo in dark mode */
 @media (prefers-color-scheme: dark) {
   .logo {
     filter: invert();
   }
 }
+
+/* Centered container */
 .container {
   text-align: center;
   padding: 2rem;
 }
 
+/* Features grid layout */
 .features {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -178,6 +196,7 @@ a.secondary {
   margin-top: 2rem;
 }
 
+/* Responsive features grid */
 @media (max-width: 768px) {
   .features {
     grid-template-columns: 1fr;

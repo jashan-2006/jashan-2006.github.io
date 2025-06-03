@@ -17,7 +17,14 @@ export default function UserForm({ onSubmit }) {
     }))
   }
 
+  /**
+   * Handles the form submission event.
+   * Prevents the default form submission behavior and calls the onSubmit callback with the form data.
+   *
+   * @param {React.FormEvent} e - The form submission event.
+   */
   const handleSubmit = (e) => {
+
     e.preventDefault()
     onSubmit(formData)
   }
